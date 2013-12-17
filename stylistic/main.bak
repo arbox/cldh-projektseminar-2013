@@ -1,0 +1,94 @@
+;;; Define :main
+ 
+(in-package :common-graphics-user)
+
+;; The finder-function, which returns the window if it already
+;; exists, and otherwise creates and returns it.
+;; Call this function if you need only one copy of this window,
+;; and that window is a non-owned top-level window.
+(defun main () (find-or-make-application-window :main 'make-main))
+ 
+;; The maker-function, which always creates a new window.
+;; Call this function if you need more than one copy,
+;; or the single copy should have a parent or owner window.
+;; (Pass :owner to this function; :parent is for compatibility.)
+(defun make-main
+    (&key parent (owner (or parent (screen *system*))) exterior
+     (interior (make-box 570 78 923 455)) (name :main) (title "Main") (border :frame)
+     (child-p t) form-p)
+  (let ((owner
+         (make-window name :owner owner
+           :class 'dialog
+           :child-p child-p
+           :exterior exterior
+           :interior interior
+           :border border
+           :close-button t
+           :font (make-font-ex :swiss "Arial / ANSI" 15)
+           :form-state :normal
+           :maximize-button t
+           :menu (open-menu
+                    (list (make-instance 'menu-item :name :file-menu :title "~File"
+                                         :value
+                                         (open-menu
+                                            (list (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'open-text-file
+                                                   :title
+                                                   "~Open"
+                                                   :value
+                                                   'datei-laden
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   '(control-key #\O)
+                                                   :help-string
+                                                   "Open a file"))
+                                            'pull-down-menu (screen *system*) :name
+                                            :file-menu
+                                           :show-help-strings-as-tooltips nil
+                                           :on-click 'funcall-menu-item-with-window
+                                           :justification :left
+                                           :override-native-shortcuts nil)
+                                         :selected nil :available t :event-synonym nil
+                                         :help-string nil))
+                    'menu-bar (screen *system*) :name :default-menu
+                   :show-help-strings-as-tooltips nil
+                   :on-click 'funcall-menu-item
+                   :justification :left
+                   :override-native-shortcuts nil)
+           :minimize-button t
+           :name :main
+           :pop-up nil
+           :resizable t
+           :scrollbars nil
+           :state :normal
+           :system-menu t
+           :title title
+           :title-bar t
+           :dialog-items (make-main-widgets)
+           :form-p form-p
+           :form-package-name nil)))
+    owner))
+
+(defun make-main-widgets ()
+  (list (make-instance 'button :font (make-font-ex nil "Segoe UI / Default" 15) :left 14
+                       :name :analyse1 :on-click 'main-analyse1-on-click :title "analyse"
+                       :top 106)
+        (make-instance 'multi-line-editable-text :font
+                       (make-font-ex nil "Segoe UI / Default" 15) :foreground-color black
+                       :left 14 :name :input1 :top 15 :value "")
+        (make-instance 'multi-line-editable-text :font
+                       (make-font-ex nil "Segoe UI / Default" 15) :foreground-color black
+                       :left 192 :name :input2 :top 15 :value "")
+        (make-instance 'button :font (make-font-ex nil "Segoe UI / Default" 15) :left 192
+                       :name :analyse2 :on-click 'main-analyse2-on-click :title "analyse"
+                       :top 106)
+        (make-instance 'static-text :font (make-font-ex nil "Segoe UI / Default" 15)
+                       :height 146 :left 14 :name :output1 :top 132 :value "" :width 150)
+        (make-instance 'static-text :font (make-font-ex nil "Segoe UI / Default" 15)
+                       :height 146 :left 192 :name :output2 :top 132 :value "" :width
+                       142)))
