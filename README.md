@@ -6,27 +6,13 @@ https://github.com/arbox/cldh-projektseminar-2013/wiki
 
 ## Projektbeschreibung ##
 
-Wir erstellen einen Chatbot.
-
+Erstellung eines Programms zur Berechnung und Darstellung des Type-Token-Verhältnisses in beliebig vielen Texten.
+Unterstüzt Stemming von deutschen,englischen und russichen Texten
 ## Installation
 
-Add lita-qa to your Lita instance's Gemfile:
+Der Programmordner enthält eine ausführbare "TTR-analyzer.exe".
+Keine Installation notwendig.
 
-``` ruby
-gem 'lita-qa'
-```
-
-## Configuration
-
-This handler needs no configuration for now and can be used with defaults.
-
-## Usage
-
-``` bash
-arbox@alpha:~/work_space/lita/$  lita
-Type "exit" or "quit" to end the session.
-Lita > Frage: Wie komme ich zur Mensa?
-```
 
 ## License
 
