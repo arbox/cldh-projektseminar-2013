@@ -1,0 +1,276 @@
+;;; Define :main
+ 
+(in-package :common-graphics-user)
+
+;; The finder-function, which returns the window if it already
+;; exists, and otherwise creates and returns it.
+;; Call this function if you need only one copy of this window,
+;; and that window is a non-owned top-level window.
+(defun main () (find-or-make-application-window :main 'make-main))
+ 
+;; The maker-function, which always creates a new window.
+;; Call this function if you need more than one copy,
+;; or the single copy should have a parent or owner window.
+;; (Pass :owner to this function; :parent is for compatibility.)
+(defun make-main
+    (&key parent (owner (or parent (screen *system*))) exterior
+     (interior (make-box 967 127 1442 648)) (name :main) (title "TTR-Analyzer")
+     (border :frame) (child-p t) form-p)
+  (let ((owner
+         (make-window name :owner owner
+           :class 'TTR_tool
+           :child-p child-p
+           :exterior exterior
+           :interior interior
+           :border border
+           :close-button t
+           :font (make-font-ex :swiss "Arial / ANSI" 15)
+           :form-state :normal
+           :maximize-button t
+           :menu (open-menu
+                    (list (make-instance 'menu-item :name 'file-menu :title "~File"
+                                         :value
+                                         (open-menu
+                                            (list (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'add
+                                                   :title
+                                                   "Add Text"
+                                                   :value
+                                                   'text_laden
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   '(control-key #\N)
+                                                   :help-string
+                                                   "New editor")
+                                                  (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'save
+                                                   :title
+                                                   "Save Graph-Image"
+                                                   :value
+                                                   'save_graph
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   '(control-key #\S)
+                                                   :help-string
+                                                   "Save to file")
+                                                  (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   nil
+                                                   :title
+                                                   "-"
+                                                   :value
+                                                   nil
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   nil
+                                                   :event-synonym
+                                                   nil
+                                                   :help-string
+                                                   nil)
+                                                  (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'user-close
+                                                   :title
+                                                   "E~xit"
+                                                   :value
+                                                   'user-close
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   '(alt-key vk-f4)
+                                                   :help-string
+                                                   "Exit application"))
+                                            'pull-down-menu (screen *system*) :name
+                                            'file-menu
+                                           :show-help-strings-as-tooltips nil
+                                           :on-click 'funcall-menu-item-with-window
+                                           :justification :left
+                                           :override-native-shortcuts nil)
+                                         :selected nil :available t :event-synonym nil
+                                         :help-string nil)
+                          (make-instance 'menu-item :name :measure_menu :title "Measure"
+                                         :value
+                                         (open-menu
+                                            (list (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'simple_ttr
+                                                   :title
+                                                   "Simple TTR"
+                                                   :value
+                                                   'set_ttr
+                                                   :selected
+                                                   t
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   nil
+                                                   :help-string
+                                                   "Standard Measure of TTR. Types divided by Tokens.")
+                                                  (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'kgm
+                                                   :title
+                                                   "Köhler-Galle-Method"
+                                                   :value
+                                                   'set_kgm
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   nil
+                                                   :help-string
+                                                   "TTR-scale considering Text-length"))
+                                            'pull-down-menu (screen *system*) :name
+                                            :measure_menu
+                                           :show-help-strings-as-tooltips nil
+                                           :on-click 'funcall-menu-item-with-window
+                                           :justification :left
+                                           :override-native-shortcuts nil)
+                                         :selected nil :available t :event-synonym nil
+                                         :help-string nil)
+                          (make-instance 'menu-item :name :help :title "Help" :value
+                                         (open-menu
+                                            (list (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'guide
+                                                   :title
+                                                   "Guide"
+                                                   :value
+                                                   'help
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   nil
+                                                   :help-string
+                                                   nil)
+                                                  (make-instance
+                                                   'menu-item
+                                                   :name
+                                                   'contact
+                                                   :title
+                                                   "Contact"
+                                                   :value
+                                                   'contact
+                                                   :selected
+                                                   nil
+                                                   :available
+                                                   t
+                                                   :event-synonym
+                                                   nil
+                                                   :help-string
+                                                   nil))
+                                            'pull-down-menu (screen *system*) :name :help
+                                           :show-help-strings-as-tooltips nil
+                                           :on-click 'funcall-menu-item-with-window
+                                           :justification :left
+                                           :override-native-shortcuts nil)
+                                         :selected nil :available t :event-synonym nil
+                                         :help-string nil))
+                    'menu-bar (screen *system*) :name :default-menu
+                   :show-help-strings-as-tooltips nil
+                   :on-click 'funcall-menu-item
+                   :justification :left
+                   :override-native-shortcuts nil)
+           :minimize-button t
+           :name :main
+           :pop-up nil
+           :resizable t
+           :scrollbars nil
+           :state :normal
+           :system-menu t
+           :title title
+           :title-bar t
+           :dialog-items (make-main-widgets)
+           :form-p form-p
+           :form-package-name nil)))
+    owner))
+
+(defun make-main-widgets ()
+  (list (make-instance 'chart-widget :bar-chart-view (make-instance 'bar-chart-view)
+                       :bottom-attachment :scale :chart-legend
+                       (make-instance 'chart-legend) :font
+                       (make-font-ex nil "Segoe UI / Default" 15) :height 432 :item-axis
+                       (make-instance 'item-axis) :left-attachment :scale
+                       :line-graph-view (make-instance 'line-graph-view) :name
+                       :chart-widget-1 :right-attachment :scale :tab-control
+                       (list :tab-control :graph) :title "Empty Chart" :top 28
+                       :value-axis (make-instance 'value-axis) :value-axis-2
+                       (make-instance 'value-axis) :width 440)
+        (make-instance 'static-text :font (make-font-ex nil "Segoe UI / Default" 15)
+                       :height 173 :left 11 :name :static-text-1 :tab-control
+                       (list :tab-control :start) :top 37 :value "
+1. Use \"File -> Add Text\" to load new Txt-File
+   1a. Choose your preferred Stemmer (use russian only for kyrillic Texts!)
+   1b. The calculation of all three values may take some while...
+2. After selecting two texts from the list-view, use \"Compare\" to measure their similarity
+3. To draw a graph of the TTR-Development, choose \"Draw Graph\"" :width 450)
+        (make-instance 'button :font (make-font-ex nil "Segoe UI / Default" 15) :left 42
+                       :name :draw :on-click 'main-draw-on-click :tab-control
+                       (list :tab-control :start) :title "Draw Graph" :top 247 :width 92)
+        (make-instance 'list-view :columns
+                       (list (make-instance 'list-view-column :name :number :title "Nr"
+                                            :justification :left :width 44 :on-print nil
+                                            :on-sort-predicate 'string<)
+                             (make-instance 'list-view-column :name :ttr :title "TTR"
+                                            :justification :center :width 100 :on-print
+                                            nil :on-sort-predicate '<)
+                             (make-instance 'list-view-column :name :kgm :title "KGM"
+                                            :justification :left :width 100 :on-print nil
+                                            :on-sort-predicate 'string-lessp)
+                             (make-instance 'list-view-column :name :mtld :title "MTLD"
+                                            :justification :left :width 100 :on-print nil
+                                            :on-sort-predicate 'string-lessp)
+                             (make-instance 'list-view-column :name :stemmer :title
+                                            "Stemmer" :justification :left :width 100
+                                            :on-print nil :on-sort-predicate
+                                            'string-lessp))
+                       :font (make-font-ex nil "Segoe UI / Default" 15) :height 199
+                       :large-image-list
+                       (make-instance 'image-list :name :sample-large :pixmap-names
+                                      (list :melvin :melvin))
+                       :left 11 :multiple-selections t :name :text-view :on-change-test
+                       nil :small-image-list
+                       (make-instance 'image-list :name :sample-small :pixmap-names
+                                      (list :default-closed-with-mask
+                                            :default-leaf-with-mask))
+                       :sort-column :name :tab-control (list :tab-control :start) :top
+                       285 :width 456)
+        (make-instance 'button :font (make-font-ex nil "Segoe UI / Default" 15) :left 181
+                       :name :compare :on-click 'main-compare-on-click :tab-control
+                       (list :tab-control :start) :title "Compare" :top 247 :width 92)
+        (make-instance 'static-text :font (make-font-ex nil "Segoe UI / Default" 15)
+                       :height 37 :left 42 :name :static-text-2 :tab-control
+                       (list :tab-control :start) :top 210 :value "" :width 252)
+        (make-instance 'static-text :font (make-font-ex nil "Segoe UI / Default" 12)
+                       :left 302 :name :static-text-4 :tab-control
+                       (list :tab-control :start) :top 251 :value "" :width 146)
+        (make-instance 'tab-control :font (make-font-ex nil "Segoe UI / Default" 15)
+                       :height 864 :name :tab-control :on-double-click
+                       'main-tab-control-on-double-click :range
+                       (list (make-instance 'tab-info :id :start :label "Start" :widgets
+                                            '(:static-text-1 :draw :text-view :compare
+                                              :static-text-2 :static-text-4))
+                             (make-instance 'tab-info :id :graph :label "Graph" :widgets
+                                            '(:chart-widget-1)))
+                       :value :start :width 1536)))

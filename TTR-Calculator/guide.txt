@@ -1,0 +1,15 @@
+TTR: 
+Relation between Wordtokens and Wordtypes.
+
+Simple_TTR:
+Easy method to calculate the TTR. It divides the total typecount with the number of tokens. The longer a text gets, the smaller will be the TTR.
+
+MTLD: 
+Measure of textual lexical diversity. Another measure for Type-Token-Ratio. Does work better with long Texts.
+
+KGM: 
+Short for Köhler-Galle-Method, another measure. Considers the length and dynamic of a text.
+
+Stemming:
+Rule-based, automatic reduction of inflected words to their stem.
+This programm offers implementations of the Porter-Stemmer for english, german or russian texts.

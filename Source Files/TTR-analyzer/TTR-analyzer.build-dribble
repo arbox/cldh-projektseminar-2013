@@ -1,0 +1,2112 @@
+dribbling to file "C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\TTR-analyzer.build-dribble"
+ International Allegro CL Enterprise Edition
+9.0 [Windows *SMP*] (Jul 8, 2014 15:48)
+Copyright (C) 1985-2012, Franz Inc., Oakland, CA, USA.  All Rights Reserved.
+
+This development copy of Allegro CL is licensed to:
+   [pc0593] University of Trier
+
+cl-user(1): 
+cl-user(1): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl::*batch-mode*
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (setq excl::*batch-mode* t)
+ |#
+cl-user(2): (common-lisp:setq excl::*batch-mode* common-lisp:t) 
+t
+cl-user(3): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl::*break-hook*
+                                         'excl::exit-on-error-hook))
+                   (common-lisp:values)) 
+
+ #|
+ (setq excl::*break-hook* 'excl::exit-on-error-hook)
+ |#
+cl-user(4): (common-lisp:setq excl::*break-hook* 'excl::exit-on-error-hook) 
+excl::exit-on-error-hook
+cl-user(5): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(excl:set-case-mode
+                                         :case-sensitive-lower))
+                   (common-lisp:values)) 
+
+ #|
+ (set-case-mode :case-sensitive-lower)
+ |#
+cl-user(6): (excl:set-case-mode :case-sensitive-lower) 
+:case-sensitive-lower
+cl-user(7): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         system:*require-search-list*
+                                         '(#P"sys:;aserve;.fasl"
+                                           (:first
+                                            #P"sys:;code;.fasl"
+                                            #P"sys:;private;.fasl"
+                                            #P"sys:;private;crypto;.fasl"
+                                            #P"sys:;clos;.fasl"
+                                            #P"sys:;sys;.fasl"
+                                            #P"sys:;winapi;.fasl"
+                                            #P"sys:;ole;.fasl"
+                                            #P"sys:;zlib;.fasl"
+                                            #P"sys:;uri;.fasl"
+                                            #P"sys:;tester;.fasl"
+                                            #P"sys:;cl-env;.fasl"
+                                            "sys:;net-xml-generator;.fasl"
+                                            "sys:;xmlutils;.fasl"
+                                            "sys:;aserve;.fasl"
+                                            (:lib-bundle
+                                             #P"sys:;code;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;private;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;private;crypto;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;clos;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;sys;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;winapi;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;ole;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;zlib;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;uri;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;tester;.fasl")
+                                            (:lib-bundle
+                                             #P"sys:;cl-env;.fasl"))
+                                           #P"rwsys:;code;.cl"
+                                           #P"rwsys:;private;.cl"
+                                           #P"rwsys:;clos;.cl"
+                                           #P"rwsys:;sys;.cl"
+                                           #P"rwsys:;winapi;.cl"
+                                           #P"rwsys:;ole;.cl"
+                                           #P"devel:;code;.fasl")))
+                   (common-lisp:values)) 
+
+ #|
+ (setq system:*require-search-list*
+       '(#P"sys:;aserve;.fasl"
+         (:first #P"sys:;code;.fasl" #P"sys:;private;.fasl"
+          #P"sys:;private;crypto;.fasl" #P"sys:;clos;.fasl"
+          #P"sys:;sys;.fasl" #P"sys:;winapi;.fasl" #P"sys:;ole;.fasl"
+          #P"sys:;zlib;.fasl" #P"sys:;uri;.fasl" #P"sys:;tester;.fasl"
+          #P"sys:;cl-env;.fasl" "sys:;net-xml-generator;.fasl"
+          "sys:;xmlutils;.fasl" "sys:;aserve;.fasl"
+          (:lib-bundle #P"sys:;code;.fasl")
+          (:lib-bundle #P"sys:;private;.fasl")
+          (:lib-bundle #P"sys:;private;crypto;.fasl")
+          (:lib-bundle #P"sys:;clos;.fasl")
+          (:lib-bundle #P"sys:;sys;.fasl")
+          (:lib-bundle #P"sys:;winapi;.fasl")
+          (:lib-bundle #P"sys:;ole;.fasl")
+          (:lib-bundle #P"sys:;zlib;.fasl")
+          (:lib-bundle #P"sys:;uri;.fasl")
+          (:lib-bundle #P"sys:;tester;.fasl")
+          (:lib-bundle #P"sys:;cl-env;.fasl"))
+         #P"rwsys:;code;.cl" #P"rwsys:;private;.cl" #P"rwsys:;clos;.cl"
+         #P"rwsys:;sys;.cl" #P"rwsys:;winapi;.cl" #P"rwsys:;ole;.cl"
+         #P"devel:;code;.fasl"))
+ |#
+cl-user(8): (common-lisp:setq system:*require-search-list*
+                  '(#P"sys:;aserve;.fasl"
+                    (:first #P"sys:;code;.fasl" #P"sys:;private;.fasl"
+                     #P"sys:;private;crypto;.fasl" #P"sys:;clos;.fasl"
+                     #P"sys:;sys;.fasl" #P"sys:;winapi;.fasl"
+                     #P"sys:;ole;.fasl" #P"sys:;zlib;.fasl"
+                     #P"sys:;uri;.fasl" #P"sys:;tester;.fasl"
+                     #P"sys:;cl-env;.fasl"
+                     "sys:;net-xml-generator;.fasl"
+                     "sys:;xmlutils;.fasl" "sys:;aserve;.fasl"
+                     (:lib-bundle #P"sys:;code;.fasl")
+                     (:lib-bundle #P"sys:;private;.fasl")
+                     (:lib-bundle #P"sys:;private;crypto;.fasl")
+                     (:lib-bundle #P"sys:;clos;.fasl")
+                     (:lib-bundle #P"sys:;sys;.fasl")
+                     (:lib-bundle #P"sys:;winapi;.fasl")
+                     (:lib-bundle #P"sys:;ole;.fasl")
+                     (:lib-bundle #P"sys:;zlib;.fasl")
+                     (:lib-bundle #P"sys:;uri;.fasl")
+                     (:lib-bundle #P"sys:;tester;.fasl")
+                     (:lib-bundle #P"sys:;cl-env;.fasl"))
+                    #P"rwsys:;code;.cl" #P"rwsys:;private;.cl"
+                    #P"rwsys:;clos;.cl" #P"rwsys:;sys;.cl"
+                    #P"rwsys:;winapi;.cl" #P"rwsys:;ole;.cl"
+                    #P"devel:;code;.fasl")) 
+(#P"sys:;aserve;.fasl"
+ (:first #P"sys:;code;.fasl" #P"sys:;private;.fasl"
+  #P"sys:;private;crypto;.fasl" #P"sys:;clos;.fasl" #P"sys:;sys;.fasl"
+  #P"sys:;winapi;.fasl" #P"sys:;ole;.fasl" #P"sys:;zlib;.fasl"
+  #P"sys:;uri;.fasl" ...)
+ #P"rwsys:;code;.cl" #P"rwsys:;private;.cl" #P"rwsys:;clos;.cl"
+ #P"rwsys:;sys;.cl" #P"rwsys:;winapi;.cl" #P"rwsys:;ole;.cl"
+ #P"devel:;code;.fasl")
+cl-user(9): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl::*app-runtime-mode*
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (setq excl::*app-runtime-mode* t)
+ |#
+cl-user(10): (common-lisp:setq excl::*app-runtime-mode* common-lisp:t) 
+t
+cl-user(11): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:pushnew
+                                         :allegro-cl-runtime
+                                         common-lisp:*features*))
+                   (common-lisp:values)) 
+
+ #|
+ (pushnew :allegro-cl-runtime *features*)
+ |#
+cl-user(12): (common-lisp:pushnew :allegro-cl-runtime common-lisp:*features*) 
+(:allegro-cl-runtime :compiler :use-structs-in-compiler :clos
+ :atomic-subword-setf :atomic-setf :verify-stack :verify-car-cdr
+ :dynload :dlwin ...)
+cl-user(13): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:force-output))
+                   (common-lisp:values)) 
+
+ #|
+ (force-output)
+ |#
+cl-user(14): (common-lisp:force-output) 
+nil
+cl-user(15): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:progn
+                                         (common-lisp:setq
+                                          excl:*load-documentation*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*record-source-file-info*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*load-local-names-info*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*load-source-file-info*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*record-xref-info*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*load-xref-info*
+                                          common-lisp:nil)))
+                   (common-lisp:values)) 
+
+ #|
+ (progn (setq *load-documentation* nil)
+        (setq *record-source-file-info* nil)
+        (setq *load-local-names-info* nil)
+        (setq *load-source-file-info* nil)
+        (setq *record-xref-info* nil) (setq *load-xref-info* nil))
+ |#
+cl-user(16): (common-lisp:progn (common-lisp:setq excl:*load-documentation*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*record-source-file-info*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*load-local-names-info*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*load-source-file-info*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*record-xref-info*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*load-xref-info*
+                                     common-lisp:nil)) 
+nil
+cl-user(17): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         common-lisp:*load-verbose*
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (setq *load-verbose* t)
+ |#
+cl-user(18): (common-lisp:setq common-lisp:*load-verbose* common-lisp:t) 
+t
+cl-user(19): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl:*system-messages*
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (setq *system-messages* t)
+ |#
+cl-user(20): (common-lisp:setq excl:*system-messages* common-lisp:t) 
+t
+cl-user(21): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:proclaim
+                                         '(common-lisp:optimize
+                                           (common-lisp:debug 2)
+                                           (common-lisp:speed 1)
+                                           (common-lisp:compilation-speed
+                                            1)
+                                           (common-lisp:space 1)
+                                           (common-lisp:safety 1))))
+                   (common-lisp:values)) 
+
+ #|
+ (proclaim '(optimize (debug 2) (speed 1) (compilation-speed 1)
+             (space 1) (safety 1)))
+ |#
+cl-user(22): (common-lisp:proclaim '(common-lisp:optimize (common-lisp:debug 2)
+                        (common-lisp:speed 1)
+                        (common-lisp:compilation-speed 1)
+                        (common-lisp:space 1) (common-lisp:safety 1))) 
+t
+cl-user(23): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl:*daylight-saving-time-observed*
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (setq *daylight-saving-time-observed* t)
+ |#
+cl-user(24): (common-lisp:setq excl:*daylight-saving-time-observed* common-lisp:t) 
+t
+cl-user(25): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         system::*install-server-name*
+                                         common-lisp:nil))
+                   (common-lisp:values)) 
+
+ #|
+ (setq system::*install-server-name* nil)
+ |#
+cl-user(26): (common-lisp:setq system::*install-server-name* common-lisp:nil) 
+nil
+cl-user(27): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         system::*install-generate-fonts*
+                                         common-lisp:nil))
+                   (common-lisp:values)) 
+
+ #|
+ (setq system::*install-generate-fonts* nil)
+ |#
+cl-user(28): (common-lisp:setq system::*install-generate-fonts* common-lisp:nil) 
+nil
+cl-user(29): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         system::*devel*
+                                         common-lisp:nil))
+                   (common-lisp:values)) 
+
+ #|
+ (setq system::*devel* nil)
+ |#
+cl-user(30): (common-lisp:setq system::*devel* common-lisp:nil) 
+nil
+cl-user(31): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:require
+                                         :tpl-debug))
+                   (common-lisp:values)) 
+
+ #|
+ (require :tpl-debug)
+ |#
+cl-user(32): (common-lisp:require :tpl-debug) 
+; Fast loading from bundle code\tpl-debug.fasl.
+; Autoloading for package "debugger":
+;   Fast loading from bundle code\debug.fasl.
+t
+cl-user(33): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:require
+                                         :tpl-proc))
+                   (common-lisp:values)) 
+
+ #|
+ (require :tpl-proc)
+ |#
+cl-user(34): (common-lisp:require :tpl-proc) 
+; Fast loading from bundle code\tpl-proc.fasl.
+; Autoloading for package "multiprocessing":
+;   Fast loading from bundle code\proc2-s.fasl.
+t
+cl-user(35): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setf
+                                         (excl:argument-saving)
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (setf (argument-saving) t)
+ |#
+cl-user(36): (common-lisp:setf (excl:argument-saving) common-lisp:t) 
+t
+cl-user(37): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(system:load-patches
+                                         :product
+                                         #\a
+                                         :version
+                                         #\j))
+                   (common-lisp:values)) 
+
+ #|
+ (system:load-patches :product #\a :version #\j)
+ |#
+cl-user(38): (system:load-patches :product #\a :version #\j) 
+Loaded patch file C:\acl90-smp\update\pja001.001.
+Loaded patch file C:\acl90-smp\update\pja002.001.
+Loaded patch file C:\acl90-smp\update\pja003.001.
+Loaded patch file C:\acl90-smp\update\pja004.001.
+Loaded patch file C:\acl90-smp\update\pja005.001.
+Loaded patch file C:\acl90-smp\update\pja006.001.
+Loaded patch file C:\acl90-smp\update\pja007.001.
+Loaded patch file C:\acl90-smp\update\pja008.001.
+Loaded patch file C:\acl90-smp\update\pja009.001.
+cl-user(39): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(system:load-patches
+                                         :product
+                                         #\b
+                                         :version
+                                         #\j))
+                   (common-lisp:values)) 
+
+ #|
+ (system:load-patches :product #\b :version #\j)
+ |#
+cl-user(40): (system:load-patches :product #\b :version #\j) 
+Loaded patch file C:\acl90-smp\update\pjb001.001.
+Loaded patch file C:\acl90-smp\update\pjb004.001.
+Loaded patch file C:\acl90-smp\update\pjb005.001.
+Loaded patch file C:\acl90-smp\update\pjb006.001.
+cl-user(41): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:require
+                                         :runtime-std))
+                   (common-lisp:values)) 
+
+ #|
+ (require :runtime-std)
+ |#
+cl-user(42): (common-lisp:require :runtime-std) 
+; Fast loading C:\acl90-smp\code\runtime-std.002
+;;; Installing runtime-std patch, version 2.
+t
+cl-user(43): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl:*print-startup-message*
+                                         '((:compiler-switches
+                                            . common-lisp:t)
+                                           (:compiler-explain
+                                            . common-lisp:t)
+                                           (:compiler-optimizations
+                                            . common-lisp:t)
+                                           (:source-file-recording
+                                            . common-lisp:t)
+                                           (:xref . common-lisp:t)
+                                           (:case-mode . common-lisp:t)
+                                           (:external-format
+                                            . common-lisp:t))))
+                   (common-lisp:values)) 
+
+ #|
+ (setq *print-startup-message*
+       '((:compiler-switches . t) (:compiler-explain . t)
+         (:compiler-optimizations . t) (:source-file-recording . t)
+         (:xref . t) (:case-mode . t) (:external-format . t)))
+ |#
+cl-user(44): (common-lisp:setq excl:*print-startup-message*
+                  '((:compiler-switches . common-lisp:t)
+                    (:compiler-explain . common-lisp:t)
+                    (:compiler-optimizations . common-lisp:t)
+                    (:source-file-recording . common-lisp:t)
+                    (:xref . common-lisp:t)
+                    (:case-mode . common-lisp:t)
+                    (:external-format . common-lisp:t))) 
+((:compiler-switches . t) (:compiler-explain . t)
+ (:compiler-optimizations . t) (:source-file-recording . t) (:xref . t)
+ (:case-mode . t) (:external-format . t))
+cl-user(45): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl:*read-init-files*
+                                         'common-lisp:nil))
+                   (common-lisp:values)) 
+
+ #|
+ (setq *read-init-files* 'nil)
+ |#
+cl-user(46): (common-lisp:setq excl:*read-init-files* 'common-lisp:nil) 
+nil
+cl-user(47): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl:*init-file-names*
+                                         '(".clinit.cl" "clinit.cl")))
+                   (common-lisp:values)) 
+
+ #|
+ (setq *init-file-names* '(".clinit.cl" "clinit.cl"))
+ |#
+cl-user(48): (common-lisp:setq excl:*init-file-names* '(".clinit.cl" "clinit.cl")) 
+(".clinit.cl" "clinit.cl")
+cl-user(49): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:progn
+                                         (common-lisp:setq
+                                          excl:*load-documentation*
+                                          common-lisp:t)
+                                         (common-lisp:setq
+                                          excl:*record-source-file-info*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*load-local-names-info*
+                                          common-lisp:t)
+                                         (common-lisp:setq
+                                          excl:*load-source-file-info*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*record-xref-info*
+                                          common-lisp:nil)
+                                         (common-lisp:setq
+                                          excl:*load-xref-info*
+                                          common-lisp:nil)))
+                   (common-lisp:values)) 
+
+ #|
+ (progn (setq *load-documentation* t)
+        (setq *record-source-file-info* nil)
+        (setq *load-local-names-info* t)
+        (setq *load-source-file-info* nil)
+        (setq *record-xref-info* nil) (setq *load-xref-info* nil))
+ |#
+cl-user(50): (common-lisp:progn (common-lisp:setq excl:*load-documentation*
+                                     common-lisp:t)
+                   (common-lisp:setq excl:*record-source-file-info*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*load-local-names-info*
+                                     common-lisp:t)
+                   (common-lisp:setq excl:*load-source-file-info*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*record-xref-info*
+                                     common-lisp:nil)
+                   (common-lisp:setq excl:*load-xref-info*
+                                     common-lisp:nil)) 
+nil
+cl-user(51): 
+cl-user(51): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:when
+                                         (common-lisp:probe-file
+                                          "sys:custom.cl")
+                                         (common-lisp:load
+                                          "sys:custom.cl")))
+                   (common-lisp:values)) 
+
+ #|
+ (when (probe-file "sys:custom.cl") (load "sys:custom.cl"))
+ |#
+cl-user(52): (common-lisp:when (common-lisp:probe-file "sys:custom.cl")
+  (common-lisp:load "sys:custom.cl")) 
+; Loading C:\acl90-smp\custom.cl
+t
+cl-user(53): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:progn
+                                         (common-lisp:require
+                                          :cg.base
+                                          #P"sys:;code;cg-base.fasl")
+                                         (common-lisp:require
+                                          :dde
+                                          #P"sys:;code;dde.fasl")
+                                         (common-lisp:require
+                                          :cg.yes-no-string
+                                          #P"sys:;code;cg-yes-no-string.fasl")
+                                         (common-lisp:require
+                                          :cg.yes-no-list
+                                          #P"sys:;code;cg-yes-no-list.fasl")
+                                         (common-lisp:require
+                                          :cg.wrap-string
+                                          #P"sys:;code;cg-wrap-string.fasl")
+                                         (common-lisp:require
+                                          :cg.web-browser.dde
+                                          #P"sys:;code;cg-web-browser-dde.fasl")
+                                         (common-lisp:require
+                                          :cg.web-browser
+                                          #P"sys:;code;cg-web-browser.fasl")
+                                         (common-lisp:require
+                                          :cg.utility-dialog
+                                          #P"sys:;code;cg-utility-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.up-down-control
+                                          #P"sys:;code;cg-up-down-control.fasl")
+                                         (common-lisp:require
+                                          :cg.tray
+                                          #P"sys:;code;cg-tray.fasl")
+                                         (common-lisp:require
+                                          :cg.trackbar
+                                          #P"sys:;code;cg-trackbar.fasl")
+                                         (common-lisp:require
+                                          :cg.tooltip
+                                          #P"sys:;code;cg-tooltip.fasl")
+                                         (common-lisp:require
+                                          :cg.toolbar
+                                          #P"sys:;code;cg-toolbar.fasl")
+                                         (common-lisp:require
+                                          :cg.toggling-widget
+                                          #P"sys:;code;cg-toggling-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.timer
+                                          #P"sys:;code;cg-timer.fasl")
+                                         (common-lisp:require
+                                          :cg.text-widget
+                                          #P"sys:;code;cg-text-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.text-or-combo
+                                          #P"sys:;code;cg-text-or-combo.fasl")
+                                         (common-lisp:require
+                                          :cg.text-edit-pane.mark
+                                          #P"sys:;code;cg-text-edit-pane-mark.fasl")
+                                         (common-lisp:require
+                                          :cg.text-edit-pane.file-io
+                                          #P"sys:;code;cg-text-edit-pane-file-io.fasl")
+                                         (common-lisp:require
+                                          :cg.text-edit-pane
+                                          #P"sys:;code;cg-text-edit-pane.fasl")
+                                         (common-lisp:require
+                                          :cg.template-string
+                                          #P"sys:;code;cg-template-string.fasl")
+                                         (common-lisp:require
+                                          :cg.tab-control
+                                          #P"sys:;code;cg-tab-control.fasl")
+                                         (common-lisp:require
+                                          :cg.string-dialog
+                                          #P"sys:;code;cg-string-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.status-bar
+                                          #P"sys:;code;cg-status-bar.fasl")
+                                         (common-lisp:require
+                                          :cg.static-text
+                                          #P"sys:;code;cg-static-text.fasl")
+                                         (common-lisp:require
+                                          :cg.split-bar
+                                          #P"sys:;code;cg-split-bar.fasl")
+                                         (common-lisp:require
+                                          :cg.shortcut-menu
+                                          #P"sys:;code;cg-shortcut-menu.fasl")
+                                         (common-lisp:require
+                                          :cg.selected-object
+                                          #P"sys:;code;cg-selected-object.fasl")
+                                         (common-lisp:require
+                                          :cg.scrolling-static-text
+                                          #P"sys:;code;cg-scrolling-static-text.fasl")
+                                         (common-lisp:require
+                                          :cg.scroll-bar-mixin
+                                          #P"sys:;code;cg-scroll-bar-mixin.fasl")
+                                         (common-lisp:require
+                                          :cg.scroll-bar
+                                          #P"sys:;code;cg-scroll-bar.fasl")
+                                         (common-lisp:require
+                                          :cg.scaling-stream
+                                          #P"sys:;code;cg-scaling-stream.fasl")
+                                         (common-lisp:require
+                                          :cg.sample-file-menu
+                                          #P"sys:;code;cg-sample-file-menu.fasl")
+                                         (common-lisp:require
+                                          :cg.rich-edit-pane.printing
+                                          #P"sys:;code;cg-rich-edit-pane-printing.fasl")
+                                         (common-lisp:require
+                                          :cg.rich-edit-pane.clipboard
+                                          #P"sys:;code;cg-rich-edit-pane-clipboard.fasl")
+                                         (common-lisp:require
+                                          :cg.rich-edit-pane
+                                          #P"sys:;code;cg-rich-edit-pane.fasl")
+                                         (common-lisp:require
+                                          :cg.rich-edit
+                                          #P"sys:;code;cg-rich-edit.fasl")
+                                         (common-lisp:require
+                                          :cg.radio-button
+                                          #P"sys:;code;cg-radio-button.fasl")
+                                         (common-lisp:require
+                                          :cg.property
+                                          #P"sys:;code;cg-property.fasl")
+                                         (common-lisp:require
+                                          :cg.project-window
+                                          #P"sys:;code;cg-project-window.fasl")
+                                         (common-lisp:require
+                                          :cg.progress-indicator
+                                          #P"sys:;code;cg-progress-indicator.fasl")
+                                         (common-lisp:require
+                                          :cg.printing
+                                          #P"sys:;code;cg-printing.fasl")
+                                         (common-lisp:require
+                                          :cg.plot-widget
+                                          #P"sys:;code;cg-plot-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.pixmap.rotate
+                                          #P"sys:;code;cg-pixmap-rotate.fasl")
+                                         (common-lisp:require
+                                          :cg.pixmap.printing
+                                          #P"sys:;code;cg-pixmap-printing.fasl")
+                                         (common-lisp:require
+                                          :cg.pixmap.file-io
+                                          #P"sys:;code;cg-pixmap-file-io.fasl")
+                                         (common-lisp:require
+                                          :cg.pixmap-widget
+                                          #P"sys:;code;cg-pixmap-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.pixmap
+                                          #P"sys:;code;cg-pixmap.fasl")
+                                         (common-lisp:require
+                                          :cg.picture-widget.palette
+                                          #P"sys:;code;cg-picture-widget-palette.fasl")
+                                         (common-lisp:require
+                                          :cg.picture-widget
+                                          #P"sys:;code;cg-picture-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.paren-matching
+                                          #P"sys:;code;cg-paren-matching.fasl")
+                                         (common-lisp:require
+                                          :cg.palette
+                                          #P"sys:;code;cg-palette.fasl")
+                                         (common-lisp:require
+                                          :cg.outline.edit-in-place
+                                          #P"sys:;code;cg-outline-edit-in-place.fasl")
+                                         (common-lisp:require
+                                          :cg.outline.drag-and-drop
+                                          #P"sys:;code;cg-outline-drag-and-drop.fasl")
+                                         (common-lisp:require
+                                          :cg.outline
+                                          #P"sys:;code;cg-outline.fasl")
+                                         (common-lisp:require
+                                          :cg.os-window
+                                          #P"sys:;code;cg-os-window.fasl")
+                                         (common-lisp:require
+                                          :cg.os-widget
+                                          #P"sys:;code;cg-os-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.ocx
+                                          #P"sys:;code;cg-ocx.fasl")
+                                         (common-lisp:require
+                                          :cg.nodes
+                                          #P"sys:;code;cg-nodes.fasl")
+                                         (common-lisp:require
+                                          :cg.multi-picture-button.tooltip
+                                          #P"sys:;code;cg-multi-picture-button-tooltip.fasl")
+                                         (common-lisp:require
+                                          :cg.multi-picture-button.drag-and-drop
+                                          #P"sys:;code;cg-multi-picture-button-drag-and-drop.fasl")
+                                         (common-lisp:require
+                                          :cg.multi-picture-button
+                                          #P"sys:;code;cg-multi-picture-button.fasl")
+                                         (common-lisp:require
+                                          :cg.multi-line-lisp-text
+                                          #P"sys:;code;cg-multi-line-lisp-text.fasl")
+                                         (common-lisp:require
+                                          :cg.multi-line-editable-text
+                                          #P"sys:;code;cg-multi-line-editable-text.fasl")
+                                         (common-lisp:require
+                                          :cg.message-dialog
+                                          #P"sys:;code;cg-message-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.menu.tooltip
+                                          #P"sys:;code;cg-menu-tooltip.fasl")
+                                         (common-lisp:require
+                                          :cg.menu
+                                          #P"sys:;code;cg-menu.fasl")
+                                         (common-lisp:require
+                                          :cg.mci
+                                          #P"sys:;code;cg-mci.fasl")
+                                         (common-lisp:require
+                                          :cg.list-view
+                                          #P"sys:;code;cg-list-view.fasl")
+                                         (common-lisp:require
+                                          :cg.lisp-widget
+                                          #P"sys:;code;cg-lisp-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.lisp-text
+                                          #P"sys:;code;cg-lisp-text.fasl")
+                                         (common-lisp:require
+                                          :cg.lisp-edit-pane
+                                          #P"sys:;code;cg-lisp-edit-pane.fasl")
+                                         (common-lisp:require
+                                          :cg.lettered-menu
+                                          #P"sys:;code;cg-lettered-menu.fasl")
+                                         (common-lisp:require
+                                          :cg.layout
+                                          #P"sys:;code;cg-layout.fasl")
+                                         (common-lisp:require
+                                          :cg.lamp
+                                          #P"sys:;code;cg-lamp.fasl")
+                                         (common-lisp:require
+                                          :cg.keyboard-shortcuts
+                                          #P"sys:;code;cg-keyboard-shortcuts.fasl")
+                                         (common-lisp:require
+                                          :cg.item-list
+                                          #P"sys:;code;cg-item-list.fasl")
+                                         (common-lisp:require
+                                          :cg.intersect.posbox
+                                          #P"sys:;code;cg-intersect-posbox.fasl")
+                                         (common-lisp:require
+                                          :cg.intersect
+                                          #P"sys:;code;cg-intersect.fasl")
+                                         (common-lisp:require
+                                          :cg.ie
+                                          #P"sys:;code;cg-ie.fasl")
+                                         (common-lisp:require
+                                          :cg.icon-pixmap
+                                          #P"sys:;code;cg-icon-pixmap.fasl")
+                                         (common-lisp:require
+                                          :cg.icon
+                                          #P"sys:;code;cg-icon.fasl")
+                                         (common-lisp:require
+                                          :cg.html-widget
+                                          #P"sys:;code;cg-html-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.html-dialog
+                                          #P"sys:;code;cg-html-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.hotspot
+                                          #P"sys:;code;cg-hotspot.fasl")
+                                         (common-lisp:require
+                                          :cg.header-control
+                                          #P"sys:;code;cg-header-control.fasl")
+                                         (common-lisp:require
+                                          :cg.group-box
+                                          #P"sys:;code;cg-group-box.fasl")
+                                         (common-lisp:require
+                                          :cg.grid-widget.drag-and-drop
+                                          #P"sys:;code;cg-grid-widget-drag-and-drop.fasl")
+                                         (common-lisp:require
+                                          :cg.grid-widget
+                                          #P"sys:;code;cg-grid-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.graphics-context
+                                          #P"sys:;code;cg-graphics-context.fasl")
+                                         (common-lisp:require
+                                          :cg.get-position
+                                          #P"sys:;code;cg-get-position.fasl")
+                                         (common-lisp:require
+                                          :cg.get-pixmap
+                                          #P"sys:;code;cg-get-pixmap.fasl")
+                                         (common-lisp:require
+                                          :cg.gesture-emulation
+                                          #P"sys:;code;cg-gesture-emulation.fasl")
+                                         (common-lisp:require
+                                          :cg.font-dialog
+                                          #P"sys:;code;cg-font-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.find-string-dialog
+                                          #P"sys:;code;cg-find-string-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.fill-texture
+                                          #P"sys:;code;cg-fill-texture.fasl")
+                                         (common-lisp:require
+                                          :cg.file-dialog
+                                          #P"sys:;code;cg-file-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.editable-text
+                                          #P"sys:;code;cg-editable-text.fasl")
+                                         (common-lisp:require
+                                          :cg.edit-in-place
+                                          #P"sys:;code;cg-edit-in-place.fasl")
+                                         (common-lisp:require
+                                          :cg.dropping-outline
+                                          #P"sys:;code;cg-dropping-outline.fasl")
+                                         (common-lisp:require
+                                          :cg.drawable.clipboard
+                                          #P"sys:;code;cg-drawable-clipboard.fasl")
+                                         (common-lisp:require
+                                          :cg.drawable
+                                          #P"sys:;code;cg-drawable.fasl")
+                                         (common-lisp:require
+                                          :cg.drag-and-drop-image
+                                          #P"sys:;code;cg-drag-and-drop-image.fasl")
+                                         (common-lisp:require
+                                          :cg.drag-and-drop
+                                          #P"sys:;code;cg-drag-and-drop.fasl")
+                                         (common-lisp:require
+                                          :cg.directory-dialog-os
+                                          #P"sys:;code;cg-directory-dialog-os.fasl")
+                                         (common-lisp:require
+                                          :cg.directory-dialog
+                                          #P"sys:;code;cg-directory-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.dialog-item
+                                          #P"sys:;code;cg-dialog-item.fasl")
+                                         (common-lisp:require
+                                          :cg.curve
+                                          #P"sys:;code;cg-curve.fasl")
+                                         (common-lisp:require
+                                          :cg.cursor-pixmap
+                                          #P"sys:;code;cg-cursor-pixmap.fasl")
+                                         (common-lisp:require
+                                          :cg.comtab
+                                          #P"sys:;code;cg-comtab.fasl")
+                                         (common-lisp:require
+                                          :cg.common-control
+                                          #P"sys:;code;cg-common-control.fasl")
+                                         (common-lisp:require
+                                          :cg.combo-box
+                                          #P"sys:;code;cg-combo-box.fasl")
+                                         (common-lisp:require
+                                          :cg.color-dialog
+                                          #P"sys:;code;cg-color-dialog.fasl")
+                                         (common-lisp:require
+                                          :cg.clipboard.pixmap
+                                          #P"sys:;code;cg-clipboard-pixmap.fasl")
+                                         (common-lisp:require
+                                          :cg.clipboard-stack
+                                          #P"sys:;code;cg-clipboard-stack.fasl")
+                                         (common-lisp:require
+                                          :cg.clipboard
+                                          #P"sys:;code;cg-clipboard.fasl")
+                                         (common-lisp:require
+                                          :cg.class-support
+                                          #P"sys:;code;cg-class-support.fasl")
+                                         (common-lisp:require
+                                          :cg.class-slot-grid
+                                          #P"sys:;code;cg-class-slot-grid.fasl")
+                                         (common-lisp:require
+                                          :cg.choose-printer
+                                          #P"sys:;code;cg-choose-printer.fasl")
+                                         (common-lisp:require
+                                          :cg.choice-list
+                                          #P"sys:;code;cg-choice-list.fasl")
+                                         (common-lisp:require
+                                          :cg.check-box
+                                          #P"sys:;code;cg-check-box.fasl")
+                                         (common-lisp:require
+                                          :cg.chart-widget
+                                          #P"sys:;code;cg-chart-widget.fasl")
+                                         (common-lisp:require
+                                          :cg.chart-or-plot
+                                          #P"sys:;code;cg-chart-or-plot.fasl")
+                                         (common-lisp:require
+                                          :cg.caret
+                                          #P"sys:;code;cg-caret.fasl")
+                                         (common-lisp:require
+                                          :cg.button
+                                          #P"sys:;code;cg-button.fasl")
+                                         (common-lisp:require
+                                          :cg.bitmap-stream
+                                          #P"sys:;code;cg-bitmap-stream.fasl")
+                                         (common-lisp:require
+                                          :cg.bitmap-pane.clipboard
+                                          #P"sys:;code;cg-bitmap-pane-clipboard.fasl")
+                                         (common-lisp:require
+                                          :cg.bitmap-pane
+                                          #P"sys:;code;cg-bitmap-pane.fasl")
+                                         (common-lisp:require
+                                          :cg-dde-utils
+                                          #P"sys:;code;cg-dde-utils.fasl")))
+                   (common-lisp:values)) 
+
+ #|
+ (progn (require :cg.base #P"sys:;code;cg-base.fasl")
+        (require :dde #P"sys:;code;dde.fasl")
+        (require :cg.yes-no-string #P"sys:;code;cg-yes-no-string.fasl")
+        (require :cg.yes-no-list #P"sys:;code;cg-yes-no-list.fasl")
+        (require :cg.wrap-string #P"sys:;code;cg-wrap-string.fasl")
+        (require :cg.web-browser.dde
+                 #P"sys:;code;cg-web-browser-dde.fasl")
+        (require :cg.web-browser #P"sys:;code;cg-web-browser.fasl")
+        (require :cg.utility-dialog
+                 #P"sys:;code;cg-utility-dialog.fasl")
+        (require :cg.up-down-control
+                 #P"sys:;code;cg-up-down-control.fasl")
+        (require :cg.tray #P"sys:;code;cg-tray.fasl")
+        (require :cg.trackbar #P"sys:;code;cg-trackbar.fasl")
+        (require :cg.tooltip #P"sys:;code;cg-tooltip.fasl")
+        (require :cg.toolbar #P"sys:;code;cg-toolbar.fasl")
+        (require :cg.toggling-widget
+                 #P"sys:;code;cg-toggling-widget.fasl")
+        (require :cg.timer #P"sys:;code;cg-timer.fasl")
+        (require :cg.text-widget #P"sys:;code;cg-text-widget.fasl")
+        (require :cg.text-or-combo #P"sys:;code;cg-text-or-combo.fasl")
+        (require :cg.text-edit-pane.mark
+                 #P"sys:;code;cg-text-edit-pane-mark.fasl")
+        (require :cg.text-edit-pane.file-io
+                 #P"sys:;code;cg-text-edit-pane-file-io.fasl")
+        (require :cg.text-edit-pane
+                 #P"sys:;code;cg-text-edit-pane.fasl")
+        (require :cg.template-string
+                 #P"sys:;code;cg-template-string.fasl")
+        (require :cg.tab-control #P"sys:;code;cg-tab-control.fasl")
+        (require :cg.string-dialog #P"sys:;code;cg-string-dialog.fasl")
+        (require :cg.status-bar #P"sys:;code;cg-status-bar.fasl")
+        (require :cg.static-text #P"sys:;code;cg-static-text.fasl")
+        (require :cg.split-bar #P"sys:;code;cg-split-bar.fasl")
+        (require :cg.shortcut-menu #P"sys:;code;cg-shortcut-menu.fasl")
+        (require :cg.selected-object
+                 #P"sys:;code;cg-selected-object.fasl")
+        (require :cg.scrolling-static-text
+                 #P"sys:;code;cg-scrolling-static-text.fasl")
+        (require :cg.scroll-bar-mixin
+                 #P"sys:;code;cg-scroll-bar-mixin.fasl")
+        (require :cg.scroll-bar #P"sys:;code;cg-scroll-bar.fasl")
+        (require :cg.scaling-stream
+                 #P"sys:;code;cg-scaling-stream.fasl")
+        (require :cg.sample-file-menu
+                 #P"sys:;code;cg-sample-file-menu.fasl")
+        (require :cg.rich-edit-pane.printing
+                 #P"sys:;code;cg-rich-edit-pane-printing.fasl")
+        (require :cg.rich-edit-pane.clipboard
+                 #P"sys:;code;cg-rich-edit-pane-clipboard.fasl")
+        (require :cg.rich-edit-pane
+                 #P"sys:;code;cg-rich-edit-pane.fasl")
+        (require :cg.rich-edit #P"sys:;code;cg-rich-edit.fasl")
+        (require :cg.radio-button #P"sys:;code;cg-radio-button.fasl")
+        (require :cg.property #P"sys:;code;cg-property.fasl")
+        (require :cg.project-window
+                 #P"sys:;code;cg-project-window.fasl")
+        (require :cg.progress-indicator
+                 #P"sys:;code;cg-progress-indicator.fasl")
+        (require :cg.printing #P"sys:;code;cg-printing.fasl")
+        (require :cg.plot-widget #P"sys:;code;cg-plot-widget.fasl")
+        (require :cg.pixmap.rotate #P"sys:;code;cg-pixmap-rotate.fasl")
+        (require :cg.pixmap.printing
+                 #P"sys:;code;cg-pixmap-printing.fasl")
+        (require :cg.pixmap.file-io
+                 #P"sys:;code;cg-pixmap-file-io.fasl")
+        (require :cg.pixmap-widget #P"sys:;code;cg-pixmap-widget.fasl")
+        (require :cg.pixmap #P"sys:;code;cg-pixmap.fasl")
+        (require :cg.picture-widget.palette
+                 #P"sys:;code;cg-picture-widget-palette.fasl")
+        (require :cg.picture-widget
+                 #P"sys:;code;cg-picture-widget.fasl")
+        (require :cg.paren-matching
+                 #P"sys:;code;cg-paren-matching.fasl")
+        (require :cg.palette #P"sys:;code;cg-palette.fasl")
+        (require :cg.outline.edit-in-place
+                 #P"sys:;code;cg-outline-edit-in-place.fasl")
+        (require :cg.outline.drag-and-drop
+                 #P"sys:;code;cg-outline-drag-and-drop.fasl")
+        (require :cg.outline #P"sys:;code;cg-outline.fasl")
+        (require :cg.os-window #P"sys:;code;cg-os-window.fasl")
+        (require :cg.os-widget #P"sys:;code;cg-os-widget.fasl")
+        (require :cg.ocx #P"sys:;code;cg-ocx.fasl")
+        (require :cg.nodes #P"sys:;code;cg-nodes.fasl")
+        (require :cg.multi-picture-button.tooltip
+                 #P"sys:;code;cg-multi-picture-button-tooltip.fasl")
+        (require :cg.multi-picture-button.drag-and-drop
+                 #P"sys:;code;cg-multi-picture-button-drag-and-drop.fasl")
+        (require :cg.multi-picture-button
+                 #P"sys:;code;cg-multi-picture-button.fasl")
+        (require :cg.multi-line-lisp-text
+                 #P"sys:;code;cg-multi-line-lisp-text.fasl")
+        (require :cg.multi-line-editable-text
+                 #P"sys:;code;cg-multi-line-editable-text.fasl")
+        (require :cg.message-dialog
+                 #P"sys:;code;cg-message-dialog.fasl")
+        (require :cg.menu.tooltip #P"sys:;code;cg-menu-tooltip.fasl")
+        (require :cg.menu #P"sys:;code;cg-menu.fasl")
+        (require :cg.mci #P"sys:;code;cg-mci.fasl")
+        (require :cg.list-view #P"sys:;code;cg-list-view.fasl")
+        (require :cg.lisp-widget #P"sys:;code;cg-lisp-widget.fasl")
+        (require :cg.lisp-text #P"sys:;code;cg-lisp-text.fasl")
+        (require :cg.lisp-edit-pane
+                 #P"sys:;code;cg-lisp-edit-pane.fasl")
+        (require :cg.lettered-menu #P"sys:;code;cg-lettered-menu.fasl")
+        (require :cg.layout #P"sys:;code;cg-layout.fasl")
+        (require :cg.lamp #P"sys:;code;cg-lamp.fasl")
+        (require :cg.keyboard-shortcuts
+                 #P"sys:;code;cg-keyboard-shortcuts.fasl")
+        (require :cg.item-list #P"sys:;code;cg-item-list.fasl")
+        (require :cg.intersect.posbox
+                 #P"sys:;code;cg-intersect-posbox.fasl")
+        (require :cg.intersect #P"sys:;code;cg-intersect.fasl")
+        (require :cg.ie #P"sys:;code;cg-ie.fasl")
+        (require :cg.icon-pixmap #P"sys:;code;cg-icon-pixmap.fasl")
+        (require :cg.icon #P"sys:;code;cg-icon.fasl")
+        (require :cg.html-widget #P"sys:;code;cg-html-widget.fasl")
+        (require :cg.html-dialog #P"sys:;code;cg-html-dialog.fasl")
+        (require :cg.hotspot #P"sys:;code;cg-hotspot.fasl")
+        (require :cg.header-control
+                 #P"sys:;code;cg-header-control.fasl")
+        (require :cg.group-box #P"sys:;code;cg-group-box.fasl")
+        (require :cg.grid-widget.drag-and-drop
+                 #P"sys:;code;cg-grid-widget-drag-and-drop.fasl")
+        (require :cg.grid-widget #P"sys:;code;cg-grid-widget.fasl")
+        (require :cg.graphics-context
+                 #P"sys:;code;cg-graphics-context.fasl")
+        (require :cg.get-position #P"sys:;code;cg-get-position.fasl")
+        (require :cg.get-pixmap #P"sys:;code;cg-get-pixmap.fasl")
+        (require :cg.gesture-emulation
+                 #P"sys:;code;cg-gesture-emulation.fasl")
+        (require :cg.font-dialog #P"sys:;code;cg-font-dialog.fasl")
+        (require :cg.find-string-dialog
+                 #P"sys:;code;cg-find-string-dialog.fasl")
+        (require :cg.fill-texture #P"sys:;code;cg-fill-texture.fasl")
+        (require :cg.file-dialog #P"sys:;code;cg-file-dialog.fasl")
+        (require :cg.editable-text #P"sys:;code;cg-editable-text.fasl")
+        (require :cg.edit-in-place #P"sys:;code;cg-edit-in-place.fasl")
+        (require :cg.dropping-outline
+                 #P"sys:;code;cg-dropping-outline.fasl")
+        (require :cg.drawable.clipboard
+                 #P"sys:;code;cg-drawable-clipboard.fasl")
+        (require :cg.drawable #P"sys:;code;cg-drawable.fasl")
+        (require :cg.drag-and-drop-image
+                 #P"sys:;code;cg-drag-and-drop-image.fasl")
+        (require :cg.drag-and-drop #P"sys:;code;cg-drag-and-drop.fasl")
+        (require :cg.directory-dialog-os
+                 #P"sys:;code;cg-directory-dialog-os.fasl")
+        (require :cg.directory-dialog
+                 #P"sys:;code;cg-directory-dialog.fasl")
+        (require :cg.dialog-item #P"sys:;code;cg-dialog-item.fasl")
+        (require :cg.curve #P"sys:;code;cg-curve.fasl")
+        (require :cg.cursor-pixmap #P"sys:;code;cg-cursor-pixmap.fasl")
+        (require :cg.comtab #P"sys:;code;cg-comtab.fasl")
+        (require :cg.common-control
+                 #P"sys:;code;cg-common-control.fasl")
+        (require :cg.combo-box #P"sys:;code;cg-combo-box.fasl")
+        (require :cg.color-dialog #P"sys:;code;cg-color-dialog.fasl")
+        (require :cg.clipboard.pixmap
+                 #P"sys:;code;cg-clipboard-pixmap.fasl")
+        (require :cg.clipboard-stack
+                 #P"sys:;code;cg-clipboard-stack.fasl")
+        (require :cg.clipboard #P"sys:;code;cg-clipboard.fasl")
+        (require :cg.class-support #P"sys:;code;cg-class-support.fasl")
+        (require :cg.class-slot-grid
+                 #P"sys:;code;cg-class-slot-grid.fasl")
+        (require :cg.choose-printer
+                 #P"sys:;code;cg-choose-printer.fasl")
+        (require :cg.choice-list #P"sys:;code;cg-choice-list.fasl")
+        (require :cg.check-box #P"sys:;code;cg-check-box.fasl")
+        (require :cg.chart-widget #P"sys:;code;cg-chart-widget.fasl")
+        (require :cg.chart-or-plot #P"sys:;code;cg-chart-or-plot.fasl")
+        (require :cg.caret #P"sys:;code;cg-caret.fasl")
+        (require :cg.button #P"sys:;code;cg-button.fasl")
+        (require :cg.bitmap-stream #P"sys:;code;cg-bitmap-stream.fasl")
+        (require :cg.bitmap-pane.clipboard
+                 #P"sys:;code;cg-bitmap-pane-clipboard.fasl")
+        (require :cg.bitmap-pane #P"sys:;code;cg-bitmap-pane.fasl")
+        (require :cg-dde-utils #P"sys:;code;cg-dde-utils.fasl"))
+ |#
+cl-user(54): (common-lisp:progn (common-lisp:require :cg.base
+                                        #P"sys:;code;cg-base.fasl")
+                   (common-lisp:require :dde #P"sys:;code;dde.fasl")
+                   (common-lisp:require :cg.yes-no-string
+                                        #P"sys:;code;cg-yes-no-string.fasl")
+                   (common-lisp:require :cg.yes-no-list
+                                        #P"sys:;code;cg-yes-no-list.fasl")
+                   (common-lisp:require :cg.wrap-string
+                                        #P"sys:;code;cg-wrap-string.fasl")
+                   (common-lisp:require :cg.web-browser.dde
+                                        #P"sys:;code;cg-web-browser-dde.fasl")
+                   (common-lisp:require :cg.web-browser
+                                        #P"sys:;code;cg-web-browser.fasl")
+                   (common-lisp:require :cg.utility-dialog
+                                        #P"sys:;code;cg-utility-dialog.fasl")
+                   (common-lisp:require :cg.up-down-control
+                                        #P"sys:;code;cg-up-down-control.fasl")
+                   (common-lisp:require :cg.tray
+                                        #P"sys:;code;cg-tray.fasl")
+                   (common-lisp:require :cg.trackbar
+                                        #P"sys:;code;cg-trackbar.fasl")
+                   (common-lisp:require :cg.tooltip
+                                        #P"sys:;code;cg-tooltip.fasl")
+                   (common-lisp:require :cg.toolbar
+                                        #P"sys:;code;cg-toolbar.fasl")
+                   (common-lisp:require :cg.toggling-widget
+                                        #P"sys:;code;cg-toggling-widget.fasl")
+                   (common-lisp:require :cg.timer
+                                        #P"sys:;code;cg-timer.fasl")
+                   (common-lisp:require :cg.text-widget
+                                        #P"sys:;code;cg-text-widget.fasl")
+                   (common-lisp:require :cg.text-or-combo
+                                        #P"sys:;code;cg-text-or-combo.fasl")
+                   (common-lisp:require :cg.text-edit-pane.mark
+                                        #P"sys:;code;cg-text-edit-pane-mark.fasl")
+                   (common-lisp:require :cg.text-edit-pane.file-io
+                                        #P"sys:;code;cg-text-edit-pane-file-io.fasl")
+                   (common-lisp:require :cg.text-edit-pane
+                                        #P"sys:;code;cg-text-edit-pane.fasl")
+                   (common-lisp:require :cg.template-string
+                                        #P"sys:;code;cg-template-string.fasl")
+                   (common-lisp:require :cg.tab-control
+                                        #P"sys:;code;cg-tab-control.fasl")
+                   (common-lisp:require :cg.string-dialog
+                                        #P"sys:;code;cg-string-dialog.fasl")
+                   (common-lisp:require :cg.status-bar
+                                        #P"sys:;code;cg-status-bar.fasl")
+                   (common-lisp:require :cg.static-text
+                                        #P"sys:;code;cg-static-text.fasl")
+                   (common-lisp:require :cg.split-bar
+                                        #P"sys:;code;cg-split-bar.fasl")
+                   (common-lisp:require :cg.shortcut-menu
+                                        #P"sys:;code;cg-shortcut-menu.fasl")
+                   (common-lisp:require :cg.selected-object
+                                        #P"sys:;code;cg-selected-object.fasl")
+                   (common-lisp:require :cg.scrolling-static-text
+                                        #P"sys:;code;cg-scrolling-static-text.fasl")
+                   (common-lisp:require :cg.scroll-bar-mixin
+                                        #P"sys:;code;cg-scroll-bar-mixin.fasl")
+                   (common-lisp:require :cg.scroll-bar
+                                        #P"sys:;code;cg-scroll-bar.fasl")
+                   (common-lisp:require :cg.scaling-stream
+                                        #P"sys:;code;cg-scaling-stream.fasl")
+                   (common-lisp:require :cg.sample-file-menu
+                                        #P"sys:;code;cg-sample-file-menu.fasl")
+                   (common-lisp:require :cg.rich-edit-pane.printing
+                                        #P"sys:;code;cg-rich-edit-pane-printing.fasl")
+                   (common-lisp:require :cg.rich-edit-pane.clipboard
+                                        #P"sys:;code;cg-rich-edit-pane-clipboard.fasl")
+                   (common-lisp:require :cg.rich-edit-pane
+                                        #P"sys:;code;cg-rich-edit-pane.fasl")
+                   (common-lisp:require :cg.rich-edit
+                                        #P"sys:;code;cg-rich-edit.fasl")
+                   (common-lisp:require :cg.radio-button
+                                        #P"sys:;code;cg-radio-button.fasl")
+                   (common-lisp:require :cg.property
+                                        #P"sys:;code;cg-property.fasl")
+                   (common-lisp:require :cg.project-window
+                                        #P"sys:;code;cg-project-window.fasl")
+                   (common-lisp:require :cg.progress-indicator
+                                        #P"sys:;code;cg-progress-indicator.fasl")
+                   (common-lisp:require :cg.printing
+                                        #P"sys:;code;cg-printing.fasl")
+                   (common-lisp:require :cg.plot-widget
+                                        #P"sys:;code;cg-plot-widget.fasl")
+                   (common-lisp:require :cg.pixmap.rotate
+                                        #P"sys:;code;cg-pixmap-rotate.fasl")
+                   (common-lisp:require :cg.pixmap.printing
+                                        #P"sys:;code;cg-pixmap-printing.fasl")
+                   (common-lisp:require :cg.pixmap.file-io
+                                        #P"sys:;code;cg-pixmap-file-io.fasl")
+                   (common-lisp:require :cg.pixmap-widget
+                                        #P"sys:;code;cg-pixmap-widget.fasl")
+                   (common-lisp:require :cg.pixmap
+                                        #P"sys:;code;cg-pixmap.fasl")
+                   (common-lisp:require :cg.picture-widget.palette
+                                        #P"sys:;code;cg-picture-widget-palette.fasl")
+                   (common-lisp:require :cg.picture-widget
+                                        #P"sys:;code;cg-picture-widget.fasl")
+                   (common-lisp:require :cg.paren-matching
+                                        #P"sys:;code;cg-paren-matching.fasl")
+                   (common-lisp:require :cg.palette
+                                        #P"sys:;code;cg-palette.fasl")
+                   (common-lisp:require :cg.outline.edit-in-place
+                                        #P"sys:;code;cg-outline-edit-in-place.fasl")
+                   (common-lisp:require :cg.outline.drag-and-drop
+                                        #P"sys:;code;cg-outline-drag-and-drop.fasl")
+                   (common-lisp:require :cg.outline
+                                        #P"sys:;code;cg-outline.fasl")
+                   (common-lisp:require :cg.os-window
+                                        #P"sys:;code;cg-os-window.fasl")
+                   (common-lisp:require :cg.os-widget
+                                        #P"sys:;code;cg-os-widget.fasl")
+                   (common-lisp:require :cg.ocx
+                                        #P"sys:;code;cg-ocx.fasl")
+                   (common-lisp:require :cg.nodes
+                                        #P"sys:;code;cg-nodes.fasl")
+                   (common-lisp:require :cg.multi-picture-button.tooltip
+                                        #P"sys:;code;cg-multi-picture-button-tooltip.fasl")
+                   (common-lisp:require :cg.multi-picture-button.drag-and-drop
+                                        #P"sys:;code;cg-multi-picture-button-drag-and-drop.fasl")
+                   (common-lisp:require :cg.multi-picture-button
+                                        #P"sys:;code;cg-multi-picture-button.fasl")
+                   (common-lisp:require :cg.multi-line-lisp-text
+                                        #P"sys:;code;cg-multi-line-lisp-text.fasl")
+                   (common-lisp:require :cg.multi-line-editable-text
+                                        #P"sys:;code;cg-multi-line-editable-text.fasl")
+                   (common-lisp:require :cg.message-dialog
+                                        #P"sys:;code;cg-message-dialog.fasl")
+                   (common-lisp:require :cg.menu.tooltip
+                                        #P"sys:;code;cg-menu-tooltip.fasl")
+                   (common-lisp:require :cg.menu
+                                        #P"sys:;code;cg-menu.fasl")
+                   (common-lisp:require :cg.mci
+                                        #P"sys:;code;cg-mci.fasl")
+                   (common-lisp:require :cg.list-view
+                                        #P"sys:;code;cg-list-view.fasl")
+                   (common-lisp:require :cg.lisp-widget
+                                        #P"sys:;code;cg-lisp-widget.fasl")
+                   (common-lisp:require :cg.lisp-text
+                                        #P"sys:;code;cg-lisp-text.fasl")
+                   (common-lisp:require :cg.lisp-edit-pane
+                                        #P"sys:;code;cg-lisp-edit-pane.fasl")
+                   (common-lisp:require :cg.lettered-menu
+                                        #P"sys:;code;cg-lettered-menu.fasl")
+                   (common-lisp:require :cg.layout
+                                        #P"sys:;code;cg-layout.fasl")
+                   (common-lisp:require :cg.lamp
+                                        #P"sys:;code;cg-lamp.fasl")
+                   (common-lisp:require :cg.keyboard-shortcuts
+                                        #P"sys:;code;cg-keyboard-shortcuts.fasl")
+                   (common-lisp:require :cg.item-list
+                                        #P"sys:;code;cg-item-list.fasl")
+                   (common-lisp:require :cg.intersect.posbox
+                                        #P"sys:;code;cg-intersect-posbox.fasl")
+                   (common-lisp:require :cg.intersect
+                                        #P"sys:;code;cg-intersect.fasl")
+                   (common-lisp:require :cg.ie
+                                        #P"sys:;code;cg-ie.fasl")
+                   (common-lisp:require :cg.icon-pixmap
+                                        #P"sys:;code;cg-icon-pixmap.fasl")
+                   (common-lisp:require :cg.icon
+                                        #P"sys:;code;cg-icon.fasl")
+                   (common-lisp:require :cg.html-widget
+                                        #P"sys:;code;cg-html-widget.fasl")
+                   (common-lisp:require :cg.html-dialog
+                                        #P"sys:;code;cg-html-dialog.fasl")
+                   (common-lisp:require :cg.hotspot
+                                        #P"sys:;code;cg-hotspot.fasl")
+                   (common-lisp:require :cg.header-control
+                                        #P"sys:;code;cg-header-control.fasl")
+                   (common-lisp:require :cg.group-box
+                                        #P"sys:;code;cg-group-box.fasl")
+                   (common-lisp:require :cg.grid-widget.drag-and-drop
+                                        #P"sys:;code;cg-grid-widget-drag-and-drop.fasl")
+                   (common-lisp:require :cg.grid-widget
+                                        #P"sys:;code;cg-grid-widget.fasl")
+                   (common-lisp:require :cg.graphics-context
+                                        #P"sys:;code;cg-graphics-context.fasl")
+                   (common-lisp:require :cg.get-position
+                                        #P"sys:;code;cg-get-position.fasl")
+                   (common-lisp:require :cg.get-pixmap
+                                        #P"sys:;code;cg-get-pixmap.fasl")
+                   (common-lisp:require :cg.gesture-emulation
+                                        #P"sys:;code;cg-gesture-emulation.fasl")
+                   (common-lisp:require :cg.font-dialog
+                                        #P"sys:;code;cg-font-dialog.fasl")
+                   (common-lisp:require :cg.find-string-dialog
+                                        #P"sys:;code;cg-find-string-dialog.fasl")
+                   (common-lisp:require :cg.fill-texture
+                                        #P"sys:;code;cg-fill-texture.fasl")
+                   (common-lisp:require :cg.file-dialog
+                                        #P"sys:;code;cg-file-dialog.fasl")
+                   (common-lisp:require :cg.editable-text
+                                        #P"sys:;code;cg-editable-text.fasl")
+                   (common-lisp:require :cg.edit-in-place
+                                        #P"sys:;code;cg-edit-in-place.fasl")
+                   (common-lisp:require :cg.dropping-outline
+                                        #P"sys:;code;cg-dropping-outline.fasl")
+                   (common-lisp:require :cg.drawable.clipboard
+                                        #P"sys:;code;cg-drawable-clipboard.fasl")
+                   (common-lisp:require :cg.drawable
+                                        #P"sys:;code;cg-drawable.fasl")
+                   (common-lisp:require :cg.drag-and-drop-image
+                                        #P"sys:;code;cg-drag-and-drop-image.fasl")
+                   (common-lisp:require :cg.drag-and-drop
+                                        #P"sys:;code;cg-drag-and-drop.fasl")
+                   (common-lisp:require :cg.directory-dialog-os
+                                        #P"sys:;code;cg-directory-dialog-os.fasl")
+                   (common-lisp:require :cg.directory-dialog
+                                        #P"sys:;code;cg-directory-dialog.fasl")
+                   (common-lisp:require :cg.dialog-item
+                                        #P"sys:;code;cg-dialog-item.fasl")
+                   (common-lisp:require :cg.curve
+                                        #P"sys:;code;cg-curve.fasl")
+                   (common-lisp:require :cg.cursor-pixmap
+                                        #P"sys:;code;cg-cursor-pixmap.fasl")
+                   (common-lisp:require :cg.comtab
+                                        #P"sys:;code;cg-comtab.fasl")
+                   (common-lisp:require :cg.common-control
+                                        #P"sys:;code;cg-common-control.fasl")
+                   (common-lisp:require :cg.combo-box
+                                        #P"sys:;code;cg-combo-box.fasl")
+                   (common-lisp:require :cg.color-dialog
+                                        #P"sys:;code;cg-color-dialog.fasl")
+                   (common-lisp:require :cg.clipboard.pixmap
+                                        #P"sys:;code;cg-clipboard-pixmap.fasl")
+                   (common-lisp:require :cg.clipboard-stack
+                                        #P"sys:;code;cg-clipboard-stack.fasl")
+                   (common-lisp:require :cg.clipboard
+                                        #P"sys:;code;cg-clipboard.fasl")
+                   (common-lisp:require :cg.class-support
+                                        #P"sys:;code;cg-class-support.fasl")
+                   (common-lisp:require :cg.class-slot-grid
+                                        #P"sys:;code;cg-class-slot-grid.fasl")
+                   (common-lisp:require :cg.choose-printer
+                                        #P"sys:;code;cg-choose-printer.fasl")
+                   (common-lisp:require :cg.choice-list
+                                        #P"sys:;code;cg-choice-list.fasl")
+                   (common-lisp:require :cg.check-box
+                                        #P"sys:;code;cg-check-box.fasl")
+                   (common-lisp:require :cg.chart-widget
+                                        #P"sys:;code;cg-chart-widget.fasl")
+                   (common-lisp:require :cg.chart-or-plot
+                                        #P"sys:;code;cg-chart-or-plot.fasl")
+                   (common-lisp:require :cg.caret
+                                        #P"sys:;code;cg-caret.fasl")
+                   (common-lisp:require :cg.button
+                                        #P"sys:;code;cg-button.fasl")
+                   (common-lisp:require :cg.bitmap-stream
+                                        #P"sys:;code;cg-bitmap-stream.fasl")
+                   (common-lisp:require :cg.bitmap-pane.clipboard
+                                        #P"sys:;code;cg-bitmap-pane-clipboard.fasl")
+                   (common-lisp:require :cg.bitmap-pane
+                                        #P"sys:;code;cg-bitmap-pane.fasl")
+                   (common-lisp:require :cg-dde-utils
+                                        #P"sys:;code;cg-dde-utils.fasl")) 
+; Fast loading C:\acl90-smp\code\cg-base.fasl
+;   Fast loading from bundle winapi\winapi.fasl.
+;     Fast loading from bundle code\defftype.fasl.
+;       Fast loading from bundle code\compftype.fasl.
+;   Fast loading from bundle winapi\winapi-dev.fasl.
+;   Fast loading from bundle code\seq2.fasl.
+;   Fast loading from bundle code\list2.fasl.
+;   Fast loading from bundle code\iodefs.fasl.
+;     Fast loading from bundle code\iordefs.fasl.
+;       Fast loading from bundle code\efmacs.fasl.
+;   Fast loading from bundle code\process.fasl.
+;     Fast loading from bundle code\proc2common.fasl.
+;   Fast loading C:\acl90-smp\code\cg-dde-utils.fasl
+;   Fast loading from bundle code\ef-fat.fasl.
+;   Fast loading from bundle code\efft-fat-base.fasl.
+;   Fast loading from bundle code\ef-fat-le.fasl.
+;   Fast loading from bundle code\efft-fat-le-base.fasl.
+;   Fast loading from bundle code\ef-unicode.fasl.
+;   Fast loading from bundle code\efft-unicode-base.fasl.
+;   Fast loading C:\acl90-smp\code\defsubst.001
+;;; Installing defsubst patch, version 1.
+Loaded patch file C:\acl90-smp\update\pjk001.001.
+; Fast loading C:\acl90-smp\code\dde.fasl
+; Fast loading C:\acl90-smp\code\cg-yes-no-string.fasl
+;   Fast loading C:\acl90-smp\code\cg-dialog-item.001
+;   Fast loading C:\acl90-smp\code\cg-utility-dialog.fasl
+;   Fast loading C:\acl90-smp\code\cg-string-dialog.fasl
+;     Fast loading C:\acl90-smp\code\cg-button.fasl
+;       Fast loading C:\acl90-smp\code\cg-os-widget.fasl
+;       Fast loading C:\acl90-smp\code\cg-toggling-widget.fasl
+;     Fast loading C:\acl90-smp\code\cg-editable-text.fasl
+;       Fast loading C:\acl90-smp\code\cg-text-widget.fasl
+;         Fast loading C:\acl90-smp\code\cg-text-or-combo.fasl
+;     Fast loading C:\acl90-smp\code\cg-static-text.fasl
+;     Fast loading C:\acl90-smp\code\cg-picture-widget.fasl
+;       Fast loading C:\acl90-smp\code\cg-pixmap.001
+;       Fast loading C:\acl90-smp\code\cg-pixmap-widget.fasl
+;         Fast loading C:\acl90-smp\code\cg-pixmap-file-io.fasl
+;       Fast loading C:\acl90-smp\code\cg-icon.fasl
+;     Fast loading C:\acl90-smp\code\cg-message-dialog.fasl
+;       Fast loading C:\acl90-smp\code\cg-scrolling-static-text.fasl
+;         Fast loading C:\acl90-smp\code\cg-lisp-widget.fasl
+;         Fast loading C:\acl90-smp\code\cg-bitmap-stream.fasl
+; Fast loading C:\acl90-smp\code\cg-yes-no-list.fasl
+;   Fast loading C:\acl90-smp\code\cg-item-list.fasl
+;     Fast loading C:\acl90-smp\code\cg-timer.fasl
+; Fast loading C:\acl90-smp\code\cg-wrap-string.fasl
+; Fast loading C:\acl90-smp\code\cg-web-browser-dde.fasl
+;   Fast loading C:\acl90-smp\code\cg-os-window.fasl
+;   Fast loading C:\acl90-smp\code\cg-web-browser.fasl
+;     Fast loading C:\acl90-smp\code\cg-gesture-emulation.fasl
+;     Fast loading C:\acl90-smp\code\cg-clipboard.fasl
+;     Fast loading C:\acl90-smp\ole\ole.004
+;;; Installing ole patch, version 4.
+;       Fast loading from bundle code\foreign.fasl.
+;       Fast loading from bundle clos\mcombin.fasl.
+;       Fast loading from bundle code\ffcompat.fasl.
+;       Fast loading from bundle code\cltl1.fasl.
+;       Fast loading C:\acl90-smp\ole\client\imalloc.fasl
+;         Fast loading C:\acl90-smp\ole\client\iunknown.001
+;;; Installing iunknown patch, version 1.
+;     Fast loading C:\acl90-smp\ole\ole-dev.fasl
+;       Fast loading C:\acl90-smp\ole\olecomp.001
+;;; Installing olecomp patch, version 1.
+;     Fast loading C:\acl90-smp\ole\client\ishelllink.fasl
+;     Fast loading C:\acl90-smp\ole\client\ipersistfile.fasl
+;       Fast loading C:\acl90-smp\ole\client\ipersist.fasl
+; Fast loading C:\acl90-smp\code\cg-up-down-control.fasl
+;   Fast loading C:\acl90-smp\code\cg-scroll-bar-mixin.fasl
+;   Fast loading C:\acl90-smp\code\cg-common-control.fasl
+; Fast loading C:\acl90-smp\code\cg-tray.fasl
+; Fast loading C:\acl90-smp\code\cg-trackbar.fasl
+; Fast loading C:\acl90-smp\code\cg-tooltip.fasl
+; Fast loading C:\acl90-smp\code\cg-toolbar.fasl
+; Fast loading C:\acl90-smp\code\cg-text-edit-pane-mark.fasl
+;   Fast loading C:\acl90-smp\code\cg-text-edit-pane.001
+;     Fast loading C:\acl90-smp\code\cg-comtab.fasl
+;       Fast loading C:\acl90-smp\code\cg-keyboard-shortcuts.fasl
+;     Fast loading C:\acl90-smp\code\cg-caret.fasl
+;     Fast loading C:\acl90-smp\code\cg-clipboard-stack.fasl
+;     Fast loading C:\acl90-smp\code\ef-e-cr.001
+;;; Installing ef-e-cr patch, version 1.
+; Fast loading C:\acl90-smp\code\cg-text-edit-pane-file-io.fasl
+;   Fast loading C:\acl90-smp\code\cg-file-dialog.fasl
+; Fast loading C:\acl90-smp\code\cg-template-string.fasl
+; Fast loading C:\acl90-smp\code\cg-tab-control.fasl
+; Fast loading C:\acl90-smp\code\cg-status-bar.fasl
+; Fast loading C:\acl90-smp\code\cg-split-bar.fasl
+; Fast loading C:\acl90-smp\code\cg-shortcut-menu.fasl
+;   Fast loading C:\acl90-smp\code\cg-menu.fasl
+; Fast loading C:\acl90-smp\code\cg-selected-object.fasl
+; Fast loading C:\acl90-smp\code\cg-scroll-bar.fasl
+; Fast loading C:\acl90-smp\code\cg-scaling-stream.fasl
+; Fast loading C:\acl90-smp\code\cg-sample-file-menu.fasl
+; Fast loading C:\acl90-smp\code\cg-rich-edit-pane-printing.fasl
+;   Fast loading C:\acl90-smp\code\cg-rich-edit-pane.fasl
+;   Fast loading C:\acl90-smp\code\cg-printing.002
+; Fast loading C:\acl90-smp\code\cg-rich-edit-pane-clipboard.fasl
+; Fast loading C:\acl90-smp\code\cg-rich-edit.fasl
+;   Fast loading C:\acl90-smp\code\cg-multi-picture-button.fasl
+;     Fast loading C:\acl90-smp\code\cg-bitmap-pane.fasl
+;   Fast loading C:\acl90-smp\code\cg-multi-line-editable-text.fasl
+;   Fast loading C:\acl90-smp\code\cg-combo-box.fasl
+;   Fast loading C:\acl90-smp\code\cg-color-dialog.fasl
+;   Fast loading C:\acl90-smp\code\cg-font-dialog.fasl
+; Fast loading C:\acl90-smp\code\cg-radio-button.fasl
+; Fast loading C:\acl90-smp\code\cg-property.fasl
+;   Fast loading C:\acl90-smp\code\cg-check-box.fasl
+;   Fast loading C:\acl90-smp\code\cg-list-view.fasl
+;   Fast loading C:\acl90-smp\code\cg-multi-line-lisp-text.fasl
+;     Fast loading C:\acl90-smp\code\cg-lisp-edit-pane.fasl
+;   Fast loading C:\acl90-smp\code\cg-drawable.fasl
+;   Fast loading C:\acl90-smp\code\cg-header-control.fasl
+;   Fast loading C:\acl90-smp\code\cg-progress-indicator.fasl
+;   Fast loading C:\acl90-smp\code\cg-grid-widget.fasl
+;     Fast loading C:\acl90-smp\code\cg-lamp.fasl
+;       Fast loading C:\acl90-smp\code\cg-curve.fasl
+;     Fast loading C:\acl90-smp\code\cg-edit-in-place.fasl
+;     Fast loading C:\acl90-smp\code\cg-get-position.001
+;     Fast loading C:\acl90-smp\code\cg-cursor-pixmap.fasl
+;       Fast loading C:\acl90-smp\code\cg-fill-texture.fasl
+;   Fast loading C:\acl90-smp\code\cg-chart-or-plot.fasl
+;   Fast loading C:\acl90-smp\code\cg-chart-widget.fasl
+;   Fast loading C:\acl90-smp\code\cg-plot-widget.fasl
+;   Fast loading C:\acl90-smp\code\cg-group-box.fasl
+;   Fast loading C:\acl90-smp\code\cg-outline.fasl
+;   Fast loading C:\acl90-smp\code\cg-dropping-outline.fasl
+;   Fast loading C:\acl90-smp\code\cg-html-widget.fasl
+;     Fast loading C:\acl90-smp\code\cg-ie.fasl
+;       Fast loading C:\acl90-smp\code\cg-ocx.fasl
+;         Fast loading C:\acl90-smp\ole\client\container.fasl
+;           Fast loading C:\acl90-smp\ole\olewin.fasl
+;           Fast loading C:\acl90-smp\ole\client\iviewobject2.fasl
+;             Fast loading C:\acl90-smp\ole\client\iviewobject.fasl
+;           Fast loading C:\acl90-smp\ole\client\ioleobject.fasl
+;           Fast loading C:\acl90-smp\ole\client\ioleinplaceobject.fasl
+;             Fast loading C:\acl90-smp\ole\client\iolewindow.fasl
+;           Fast loading C:\acl90-smp\ole\client\iclassfactory.fasl
+;           Fast loading C:\acl90-smp\ole\client\idispatch.fasl
+;           Fast loading C:\acl90-smp\ole\client\ioleclientsite.fasl
+;           Fast loading
+;              C:\acl90-smp\ole\client\ioleinplaceactiveobject.fasl
+;           Fast loading
+;              C:\acl90-smp\ole\client\ioleinplaceuiwindow.fasl
+;           Fast loading C:\acl90-smp\ole\client\ioleinplaceframe.fasl
+;           Fast loading C:\acl90-smp\ole\client\ipersiststorage.fasl
+;           Fast loading C:\acl90-smp\ole\client\irunnableobject.fasl
+;           Fast loading C:\acl90-smp\ole\client\istorage.fasl
+;           Fast loading C:\acl90-smp\ole\client\istream.fasl
+;           Fast loading C:\acl90-smp\ole\server\ioleclientsite.fasl
+;             Fast loading C:\acl90-smp\ole\server\iunknown.fasl
+;           Fast loading C:\acl90-smp\ole\server\ioleinplacesite.fasl
+;             Fast loading C:\acl90-smp\ole\server\iolewindow.fasl
+;           Fast loading C:\acl90-smp\ole\server\iadvisesink.fasl
+;           Fast loading C:\acl90-smp\ole\server\iolecontrolsite.fasl
+;           Fast loading
+;              C:\acl90-smp\ole\server\ipropertynotifysink.fasl
+;           Fast loading C:\acl90-smp\ole\client\ienumoleverb.fasl
+;             Fast loading C:\acl90-smp\ole\client\ienumxxx.fasl
+;           Fast loading C:\acl90-smp\ole\server\ioleinplaceframe.fasl
+;             Fast loading
+;                C:\acl90-smp\ole\server\ioleinplaceuiwindow.fasl
+;           Fast loading C:\acl90-smp\ole\server\idispatch.fasl
+;         Fast loading C:\acl90-smp\ole\client\control.fasl
+;           Fast loading C:\acl90-smp\ole\client\iconnectionpoint.fasl
+;           Fast loading
+;              C:\acl90-smp\ole\client\iconnectionpointcontainer.fasl
+;   Fast loading C:\acl90-smp\code\cg-object-editor.fasl
+;     Fast loading C:\acl90-smp\code\cg-choice-list.fasl
+;     Fast loading C:\acl90-smp\code\cg-lettered-menu.fasl
+;     Fast loading C:\acl90-smp\code\cg-directory-dialog.fasl
+;     Fast loading C:\acl90-smp\code\cg-class-support.fasl
+;     Fast loading C:\acl90-smp\code\cg-class-grid.fasl
+;   Fast loading C:\acl90-smp\code\cg-class-slot-grid.fasl
+; Fast loading C:\acl90-smp\code\cg-project-window.fasl
+; Fast loading C:\acl90-smp\code\cg-pixmap-rotate.fasl
+; Fast loading C:\acl90-smp\code\cg-pixmap-printing.fasl
+;   Fast loading C:\acl90-smp\code\cg-get-pixmap.fasl
+; Fast loading C:\acl90-smp\code\cg-picture-widget-palette.fasl
+;   Fast loading C:\acl90-smp\code\cg-palette.fasl
+; Fast loading C:\acl90-smp\code\cg-paren-matching.fasl
+; Fast loading C:\acl90-smp\code\cg-outline-edit-in-place.fasl
+; Fast loading C:\acl90-smp\code\cg-outline-drag-and-drop.fasl
+;   Fast loading C:\acl90-smp\code\cg-drag-and-drop.fasl
+; Fast loading C:\acl90-smp\code\cg-nodes.fasl
+;   Fast loading C:\acl90-smp\code\cg-intersect.fasl
+;   Fast loading C:\acl90-smp\code\cg-intersect-posbox.fasl
+; Fast loading C:\acl90-smp\code\cg-multi-picture-button-tooltip.fasl
+; Fast loading
+;    C:\acl90-smp\code\cg-multi-picture-button-drag-and-drop.fasl
+; Fast loading C:\acl90-smp\code\cg-menu-tooltip.fasl
+; Fast loading C:\acl90-smp\code\cg-mci.fasl
+; Fast loading C:\acl90-smp\code\cg-lisp-text.fasl
+; Fast loading C:\acl90-smp\code\cg-layout.fasl
+; Fast loading C:\acl90-smp\code\cg-icon-pixmap.fasl
+; Fast loading C:\acl90-smp\code\cg-html-dialog.fasl
+; Fast loading C:\acl90-smp\code\cg-hotspot.fasl
+; Fast loading C:\acl90-smp\code\cg-grid-widget-drag-and-drop.fasl
+; Fast loading C:\acl90-smp\code\cg-graphics-context.fasl
+; Fast loading C:\acl90-smp\code\cg-find-string-dialog.fasl
+; Fast loading C:\acl90-smp\code\cg-drawable-clipboard.fasl
+;   Fast loading C:\acl90-smp\code\cg-clipboard-pixmap.fasl
+; Fast loading C:\acl90-smp\code\cg-drag-and-drop-image.fasl
+; Fast loading C:\acl90-smp\code\cg-directory-dialog-os.fasl
+; Fast loading C:\acl90-smp\code\cg-choose-printer.fasl
+; Fast loading C:\acl90-smp\code\cg-bitmap-pane-clipboard.fasl
+nil
+cl-user(55): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:let
+                                         ((excl:*global-gc-behavior*
+                                           common-lisp:nil))
+                                         (excl:tenuring
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main-bml.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main-bil.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\ttr.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\german porter.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\english porter.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\russian porter.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\plot.fasl")
+                                          (common-lisp:load
+                                           #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\roh.fasl"))))
+                   (common-lisp:values)) 
+
+ #|
+ (let ((*global-gc-behavior* nil))
+   (tenuring (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main-bml.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main-bil.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\ttr.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\german porter.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\english porter.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\russian porter.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\plot.fasl")
+             (load
+                #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\roh.fasl")))
+ |#
+cl-user(56): (common-lisp:let ((excl:*global-gc-behavior* common-lisp:nil))
+  (excl:tenuring (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main-bml.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\main-bil.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\ttr.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\german porter.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\english porter.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\russian porter.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\plot.fasl")
+                 (common-lisp:load
+                    #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\roh.fasl"))) 
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\main-bml.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\main.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\main-bil.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\ttr.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\german porter.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\english porter.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\russian porter.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\plot.fasl
+; Fast loading C:\Users\Stephan\Desktop\TTR-analyzer\roh.fasl
+t
+cl-user(57): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setf
+                                         cg.base:.internal-session-startup-hook.
+                                         #'(common-lisp:lambda
+                                            common-lisp:nil
+                                            (common-lisp:let*
+                                             ((cg.base:app
+                                               (cg.base:app
+                                                cg.base:*system*)))
+                                             (common-lisp:setf
+                                              (cg.base:standalone-application
+                                               cg.base:app)
+                                              :debuggable)
+                                             (common-lisp:setf
+                                              (cg.base:initialization-function
+                                               cg.base:app)
+                                              'cg.base:default-init-function)
+                                             (common-lisp:setf
+                                              (cg.base:default-error-handler-for-delivery
+                                               cg.base:app)
+                                              'cg.base:report-unexpected-error-and-exit)
+                                             (common-lisp:setf
+                                              (cg.base:main-window-maker
+                                               cg.base:app)
+                                              'common-graphics-user::make-main)
+                                             (common-lisp:setf
+                                              (cg.base:kill-splash-screen-when-ready
+                                               cg.base:app)
+                                              common-lisp:t)
+                                             (common-lisp:setf
+                                              (cg.base:shared-libraries
+                                               cg.base:app)
+                                              common-lisp:nil)
+                                             (common-lisp:setf
+                                              (cg.base:build-number
+                                               cg.base:app)
+                                              6)
+                                             (common-lisp:setf
+                                              (cg.base:run-with-console
+                                               cg.base:app)
+                                              common-lisp:nil)
+                                             (common-lisp:let*
+                                              ((cg.base:name
+                                                '"common-graphics-user")
+                                               (common-lisp:package
+                                                (common-lisp:and
+                                                 cg.base:name
+                                                 (common-lisp:find-package
+                                                  cg.base:name))))
+                                              (common-lisp:when
+                                               common-lisp:package
+                                               (common-lisp:setq
+                                                common-lisp:*package*
+                                                common-lisp:package)))))))
+                   (common-lisp:values)) 
+
+ #|
+ (setf cg.base:.internal-session-startup-hook.
+       #'(lambda nil
+           (let* ((cg.base:app (cg.base:app cg.base:*system*)))
+             (setf (cg.base:standalone-application cg.base:app)
+                   :debuggable)
+             (setf (cg.base:initialization-function cg.base:app)
+                   'cg.base:default-init-function)
+             (setf (cg.base:default-error-handler-for-delivery
+                     cg.base:app)
+                   'cg.base:report-unexpected-error-and-exit)
+             (setf (cg.base:main-window-maker cg.base:app)
+                   'common-graphics-user::make-main)
+             (setf (cg.base:kill-splash-screen-when-ready cg.base:app)
+                   t)
+             (setf (cg.base:shared-libraries cg.base:app) nil)
+             (setf (cg.base:build-number cg.base:app) 6)
+             (setf (cg.base:run-with-console cg.base:app) nil)
+             (let* ((cg.base:name '"common-graphics-user")
+                    (package
+                     (and cg.base:name (find-package cg.base:name))))
+               (when package (setq *package* package))))))
+ |#
+cl-user(58): (common-lisp:setf cg.base:.internal-session-startup-hook.
+                  #'(common-lisp:lambda common-lisp:nil
+                      (common-lisp:let* ((cg.base:app
+                                          (cg.base:app
+                                           cg.base:*system*)))
+                        (common-lisp:setf (cg.base:standalone-application
+                                           cg.base:app)
+                                          :debuggable)
+                        (common-lisp:setf (cg.base:initialization-function
+                                           cg.base:app)
+                                          'cg.base:default-init-function)
+                        (common-lisp:setf (cg.base:default-error-handler-for-delivery
+                                           cg.base:app)
+                                          'cg.base:report-unexpected-error-and-exit)
+                        (common-lisp:setf (cg.base:main-window-maker
+                                           cg.base:app)
+                                          'common-graphics-user::make-main)
+                        (common-lisp:setf (cg.base:kill-splash-screen-when-ready
+                                           cg.base:app)
+                                          common-lisp:t)
+                        (common-lisp:setf (cg.base:shared-libraries
+                                           cg.base:app)
+                                          common-lisp:nil)
+                        (common-lisp:setf (cg.base:build-number
+                                           cg.base:app)
+                                          6)
+                        (common-lisp:setf (cg.base:run-with-console
+                                           cg.base:app)
+                                          common-lisp:nil)
+                        (common-lisp:let* ((cg.base:name
+                                            '"common-graphics-user")
+                                           (common-lisp:package
+                                            (common-lisp:and
+                                             cg.base:name
+                                             (common-lisp:find-package
+                                              cg.base:name))))
+                          (common-lisp:when common-lisp:package
+                            (common-lisp:setq common-lisp:*package*
+                                              common-lisp:package)))))) 
+#<Interpreted Function (unnamed) @ #x2151740a>
+cl-user(59): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:when
+                                         (common-lisp:fboundp
+                                          'excl::translate-shlib-filenames)
+                                         (excl::translate-shlib-filenames
+                                          'common-lisp:t)))
+                   (common-lisp:values)) 
+
+ #|
+ (when (fboundp 'excl::translate-shlib-filenames)
+   (excl::translate-shlib-filenames 't))
+ |#
+cl-user(60): (common-lisp:when (common-lisp:fboundp 'excl::translate-shlib-filenames)
+  (excl::translate-shlib-filenames 'common-lisp:t)) 
+nil
+cl-user(61): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(excl:discard-local-name-info))
+                   (common-lisp:values)) 
+; Autoloading for discard-local-name-info:
+; Fast loading from bundle code\who.fasl.
+
+ #|
+ (discard-local-name-info)
+ |#
+cl-user(62): (excl:discard-local-name-info) 
+nil
+cl-user(63): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:require
+                                         :nocompiler))
+                   (common-lisp:values)) 
+
+ #|
+ (require :nocompiler)
+ |#
+cl-user(64): (common-lisp:require :nocompiler) 
+; Fast loading from bundle code\nocompiler.fasl.
+; Autoloading for discard-all-source-file-info:
+;   Fast loading from bundle code\srecord.fasl.
+;   Fast loading from bundle cl-env\defdecl.fasl.
+t
+cl-user(65): 
+cl-user(65): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl:*restart-init-function*
+                                         'cg.base:do-default-restart))
+                   (common-lisp:values)) 
+
+ #|
+ (setq *restart-init-function* 'cg.base:do-default-restart)
+ |#
+cl-user(66): (common-lisp:setq excl:*restart-init-function*
+                  'cg.base:do-default-restart) 
+cg.base:do-default-restart
+cl-user(67): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl::*patches-preloadable*
+                                         common-lisp:nil))
+                   (common-lisp:values)) 
+
+ #|
+ (setq excl::*patches-preloadable* nil)
+ |#
+cl-user(68): (common-lisp:setq excl::*patches-preloadable* common-lisp:nil) 
+nil
+cl-user(69): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:setq
+                                         excl::*source-file-autoload-srecord*
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (setq excl::*source-file-autoload-srecord* t)
+ |#
+cl-user(70): (common-lisp:setq excl::*source-file-autoload-srecord* common-lisp:t) 
+t
+cl-user(71): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:progn
+                                         (excl:gc :tenure)
+                                         (excl:gc :tenure)
+                                         (excl:gc :tenure)
+                                         (excl:gc common-lisp:t)))
+                   (common-lisp:values)) 
+
+ #|
+ (progn (gc :tenure) (gc :tenure) (gc :tenure) (gc t))
+ |#
+cl-user(72): (common-lisp:progn (excl:gc :tenure) (excl:gc :tenure)
+                   (excl:gc :tenure) (excl:gc common-lisp:t)) 
+cl-user(73): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(system:resize-areas
+                                         :old
+                                         256000
+                                         :new
+                                         (common-lisp:-
+                                          (common-lisp:/ 6144 2)
+                                          (common-lisp:* 1025 50))
+                                         :global-gc
+                                         common-lisp:t
+                                         :tenure
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (system:resize-areas :old 256000
+   :new (- (/ 6144 2) (* 1025 50))
+   :global-gc t
+   :tenure t)
+ |#
+cl-user(74): (system:resize-areas :old 256000
+  :new (common-lisp:- (common-lisp:/ 6144 2) (common-lisp:* 1025 50))
+  :global-gc common-lisp:t
+  :tenure common-lisp:t) 
+cl-user(75): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(excl::allegro-runtime-check))
+                   (common-lisp:values)) 
+
+ #|
+ (excl::allegro-runtime-check)
+ |#
+cl-user(76): (excl::allegro-runtime-check) 
+nil
+cl-user(77): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:progn
+                                         (common-lisp:princ
+                                          "; dumping image...")
+                                         (common-lisp:force-output)))
+                   (common-lisp:values)) 
+
+ #|
+ (progn (princ "; dumping image...") (force-output))
+ |#
+cl-user(78): (common-lisp:progn (common-lisp:princ "; dumping image...")
+                   (common-lisp:force-output)) 
+; dumping image...
+nil
+cl-user(79): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(excl:dumplisp
+                                         :name
+                                         #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\TTR-analyzer.dxl"
+                                         :bundle-file
+                                         #P"C:\\acl90-smp\\files.bu"
+                                         :destination-directory
+                                         #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\"
+                                         :autoload-warning
+                                         common-lisp:nil
+                                         :pll-file
+                                         common-lisp:nil
+                                         :pll-from-sys
+                                         common-lisp:t
+                                         :runtime
+                                         :standard
+                                         :show-window
+                                         :showna
+                                         :system-dlls-path
+                                         "system-dlls/"
+                                         :temporary-directory
+                                         #P"C:\\Users\\Stephan\\AppData\\Local\\Temp\\"
+                                         :verbose
+                                         common-lisp:nil
+                                         :runtime
+                                         :standard
+                                         :bundle-file
+                                         #P"C:\\acl90-smp\\files.bu"
+                                         :autoload-warning
+                                         common-lisp:nil
+                                         :include-ide
+                                         common-lisp:nil
+                                         :include-devel-env
+                                         common-lisp:nil
+                                         :include-compiler
+                                         common-lisp:t
+                                         :discard-compiler
+                                         common-lisp:t
+                                         :include-tpl
+                                         common-lisp:t
+                                         :include-debugger
+                                         common-lisp:t
+                                         :build-debug
+                                         common-lisp:nil
+                                         :us-government
+                                         common-lisp:nil
+                                         :discard-local-name-info
+                                         common-lisp:t
+                                         :discard-source-file-info
+                                         common-lisp:nil
+                                         :record-source-file-info
+                                         common-lisp:nil
+                                         :load-source-file-info
+                                         common-lisp:nil
+                                         :discard-xref-info
+                                         common-lisp:nil
+                                         :record-xref-info
+                                         common-lisp:nil
+                                         :load-xref-info
+                                         common-lisp:nil
+                                         :destination-directory
+                                         #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\TTR-analyzer.lpr"
+                                         :build-output
+                                         #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\TTR-analyzer.build-dribble"
+                                         :splash-from-file
+                                         common-lisp:nil
+                                         :newspace
+                                         6144
+                                         :oldspace
+                                         256000
+                                         :show-window
+                                         :showna))
+                   (common-lisp:values)) 
+
+ #|
+ (dumplisp :name
+           #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\TTR-analyzer.dxl"
+   :bundle-file #P"C:\\acl90-smp\\files.bu"
+   :destination-directory #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\"
+   :autoload-warning nil
+   :pll-file nil
+   :pll-from-sys t
+   :runtime :standard
+   :show-window :showna
+   :system-dlls-path "system-dlls/"
+   :temporary-directory #P"C:\\Users\\Stephan\\AppData\\Local\\Temp\\"
+   :verbose nil
+   :runtime :standard
+   :bundle-file #P"C:\\acl90-smp\\files.bu"
+   :autoload-warning nil
+   :include-ide nil
+   :include-devel-env nil
+   :include-compiler t
+   :discard-compiler t
+   :include-tpl t
+   :include-debugger t
+   :build-debug nil
+   :us-government nil
+   :discard-local-name-info t
+   :discard-source-file-info nil
+   :record-source-file-info nil
+   :load-source-file-info nil
+   :discard-xref-info nil
+   :record-xref-info nil
+   :load-xref-info nil
+   :destination-directory #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\TTR-analyzer.lpr"
+   :build-output #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\TTR-analyzer.build-dribble"
+   :splash-from-file nil
+   :newspace 6144
+   :oldspace 256000
+   :show-window :showna)
+ |#
+cl-user(80): (excl:dumplisp :name
+               #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\TTR-analyzer.dxl"
+  :bundle-file #P"C:\\acl90-smp\\files.bu"
+  :destination-directory #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\"
+  :autoload-warning common-lisp:nil
+  :pll-file common-lisp:nil
+  :pll-from-sys common-lisp:t
+  :runtime :standard
+  :show-window :showna
+  :system-dlls-path "system-dlls/"
+  :temporary-directory #P"C:\\Users\\Stephan\\AppData\\Local\\Temp\\"
+  :verbose common-lisp:nil
+  :runtime :standard
+  :bundle-file #P"C:\\acl90-smp\\files.bu"
+  :autoload-warning common-lisp:nil
+  :include-ide common-lisp:nil
+  :include-devel-env common-lisp:nil
+  :include-compiler common-lisp:t
+  :discard-compiler common-lisp:t
+  :include-tpl common-lisp:t
+  :include-debugger common-lisp:t
+  :build-debug common-lisp:nil
+  :us-government common-lisp:nil
+  :discard-local-name-info common-lisp:t
+  :discard-source-file-info common-lisp:nil
+  :record-source-file-info common-lisp:nil
+  :load-source-file-info common-lisp:nil
+  :discard-xref-info common-lisp:nil
+  :record-xref-info common-lisp:nil
+  :load-xref-info common-lisp:nil
+  :destination-directory #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\TTR-analyzer.lpr"
+  :build-output #P"C:\\Users\\Stephan\\Desktop\\TTR-analyzer\\TTR-analyzer.build-dribble"
+  :splash-from-file common-lisp:nil
+  :newspace 6144
+  :oldspace 256000
+  :show-window :showna) 
+cl-user(81): 
+cl-user(81): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(common-lisp:require
+                                         :genutils))
+                   (common-lisp:values)) 
+
+ #|
+ (require :genutils)
+ |#
+cl-user(82): (common-lisp:require :genutils) 
+; Fast loading C:\acl90-smp\code\genutils.fasl
+t
+cl-user(83): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(excl::copy-shared-libraries
+                                         #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\"
+                                         'common-lisp:t
+                                         :system-dlls-path
+                                         "system-dlls/"
+                                         :verbose
+                                         common-lisp:t))
+                   (common-lisp:values)) 
+
+ #|
+ (excl::copy-shared-libraries
+    #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\" 't
+    :system-dlls-path
+   "system-dlls/" :verbose
+   t)
+ |#
+cl-user(84): (excl::copy-shared-libraries
+   #P"C:\\Users\\Stephan\\Desktop\\TTR-Calculator\\" 'common-lisp:t
+   :system-dlls-path
+  "system-dlls/" :verbose
+  common-lisp:t) 
+;; copying file C:\WINDOWS\system32\msvcrt.dll to C:\Users\Stephan\Desktop\TTR-Calculator\system-dlls\msvcrt.dll
+;; copying file C:\WINDOWS\system32\psapi.dll to C:\Users\Stephan\Desktop\TTR-Calculator\system-dlls\psapi.dll
+;; copying file acli9073s.dll to C:\Users\Stephan\Desktop\TTR-Calculator\acli9073s.dll
+nil
+cl-user(85): 
+cl-user(85): (common-lisp:progn (common-lisp:format common-lisp:t
+                                       "~% #|~% ~s~% |#~%"
+                                       '(excl:exit 0))
+                   (common-lisp:values)) 
+
+ #|
+ (exit 0)
+ |#
+cl-user(86): (excl:exit 0) 
