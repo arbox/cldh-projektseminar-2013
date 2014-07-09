@@ -14,7 +14,7 @@
 ;; (Pass :owner to this function; :parent is for compatibility.)
 (defun make-main
     (&key parent (owner (or parent (screen *system*))) exterior
-     (interior (make-box 760 108 1235 652)) (name :main) (title "TTR-Analyzer")
+     (interior (make-box 908 131 1383 678)) (name :main) (title "TTR-Analyzer")
      (border :frame) (child-p t) form-p)
   (let ((owner
          (make-window name :owner owner
@@ -226,12 +226,17 @@
                        :name :add_Text :on-click 'main-add_Text-on-click :tab-control
                        (list :tab-control :start) :title "Add new Text" :top 484 :width
                        101)
+        (make-instance 'static-text :font (make-font-ex nil "Segoe UI / Default" 12)
+                       :foreground-color red :height 36 :left 132 :name :warning
+                       :tab-control (list :tab-control :start) :top 491 :value "" :width
+                       287)
         (make-instance 'tab-control :font (make-font-ex nil "Segoe UI / Default" 15)
                        :height 864 :name :tab-control :on-double-click
                        'main-tab-control-on-double-click :range
                        (list (make-instance 'tab-info :id :start :label "Start" :widgets
                                             '(:static-text-1 :draw :text-view :compare
-                                              :static-text-2 :static-text-4 :add_Text))
+                                              :static-text-2 :static-text-4 :add_Text
+                                              :warning))
                              (make-instance 'tab-info :id :graph :label "Graph" :widgets
                                             '(:chart-widget-1)))
                        :value :start :width 1536)))

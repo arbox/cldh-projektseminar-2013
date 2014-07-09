@@ -1,3 +1,0 @@
-Allegro Common Lisp
-Project File
-for manual compiling

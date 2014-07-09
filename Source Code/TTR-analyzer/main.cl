@@ -2,12 +2,13 @@
 (in-package :common-graphics-user)
 
 (defclass TTR_tool (dialog) 
-  ((measure :accessor measure :initform "ttr")
-   (texts :accessor texts :initform ())
+  ((texts :accessor texts :initform ())
    (struct :accessor struct :initform ())
    (text-count :accessor text-count :initform 0))
   )
 
+;;;Structure for each Text
+;;;Contains calculated Data
 (defstruct (Text)
   id
   tokenized
@@ -19,24 +20,39 @@
   )
 
 
+;;;Loads Text into the program
+;;;creates a Text-structure and calculates its id, tokenized, stemmer, ttr etc.
+;;;this may take a while...
+;;;updates list-view and tab-control
 
 (defun text_laden(form)
   (let ((datei (ask-user-for-existing-pathname "Datei laden"))
         )
     (when datei
       (progn
-        (print (file datei))
+        
+        ;;;set name of text for tab, increments text-count
+        (let ((name (write-to-string datei)))
+          (setf name (subseq name (+ 1 (search "\\" name :from-end t)) (position #\. name)))  
         (incf (slot-value form 'text-count))
-
+          
+          ;;;creates x = Text-structure
+          ;;;sets id and stemmer
         (let 
             ((x (make-Text)))
           (setf (Text-id x) (slot-value form 'text-count)
                  (Text-stemmer x) (ask-user-for-choice-from-list "Choose Stemmer" (list "none" "english" "german" "russian")))
           
+          ;;;Loads text into tab
+          ;;;if the text is cyrillic, chaneg to utf-8
           (if (equal "russian" (Text-stemmer x))
               (setf (slot-value form 'texts) (append (slot-value form 'texts) (list (file-contents datei :external-format :utf-8))))
               (setf (slot-value form 'texts) (append (slot-value form 'texts) (list (file-contents datei))))
           )
+          
+          
+          ;;;Start Tokenizing
+          ;;;apply chosen Stemmer
           
           (setf 
            (value(find-component :static-text-4 form))
@@ -53,34 +69,34 @@
                 )
               )
             )
-
-          (if (equal "" (car(Text-tokenized x)))
+          
+          ;;;error-handling
+          ;;;not choosing any stemmer or using russian stemmer for non-cyrillic texts
+          
+          (if (or (not (Text-tokenized x))(equal "" (car(Text-tokenized x))))
               (progn
-              (let 
-                  ((warning (make-window :modal-dialog-test
-                        :owner form
-                        :title "Warning"
-                        :pop-up t
-                        :height 200
-                        :width 340
-                        :dialog-items 
-                        (list (make-instance 'static-text
-                                :height 300
-                                :width 340
-                                :value "WARNING: Don't use the russian stemmer, if the text is not in Cyrillic script"))
-                 )))
-                (pop-up-modal-dialog warning))
+                (unless (not (Text-tokenized x))
+                        (setf (value(find-component :warning form)) "Don't use the russian stemmer, unless text is in Cyrillic script"
+                              (value(find-component :static-text-4 form)) ""))
                 (decf (slot-value form 'text-count))
                 (setf (slot-value form 'texts) (delete (nth (slot-value form 'text-count) (slot-value form 'texts)) (slot-value form 'texts)))
                 )
-               
+            
+            ;;; if no error, then start calculating values
+            ;;;TTR,KGM,MTLD
             (progn
+              (setf (value(find-component :warning form)) "")
               (setf (value(find-component :static-text-4 form)) "Calculating TTR")
               (setf (Text-ttr_list x) (list_TTR (Text-tokenized x))
                     (Text-ttr x) (first(last (Text-ttr_list x)))
                     (slot-value form 'struct) (append (slot-value form 'struct) (list x)))
               (setf (value(find-component :static-text-4 form)) "Calculating KGM"
-                    (Text-kgm x) (kgm x))   
+                (Text-kgm x) (kgm x)
+                (value(find-component :static-text-4 form))  "Calculating MTLD"
+                (Text-mtld x) (mtld (Text-tokenized x)))
+              
+              ;;;Add Text to list-view
+              
               (let 
                 ((entry (write-to-string (Text-id x)))
                  (text x))
@@ -91,11 +107,13 @@
                        :value-plist `(:number ,entry 
                             :ttr ,(Text-ttr text)
                             :kgm ,(car(last(kgm text)))
-                            :mtld ,(mtld (Text-tokenized text))
+                            :mtld ,(Text-mtld text)
                             :stemmer ,(Text-stemmer text)))
                  )
-              
-               (add-tab (find-named-object :tab-control form) (intern entry) entry)
+                
+                ;;;Add Text to Tab-control
+                
+               (add-tab (find-named-object :tab-control form) (intern entry) name)
                (add-component-to-tab (find-named-object :tab-control form)
                                      (intern entry)
                                      (make-instance 'multi-line-editable-text
@@ -108,7 +126,7 @@
                                          :left 0
                                          :name (intern (concatenate 'string "Text-" entry))
                                          :top 36
-                                       :value  (nth (- (slot-value form 'text-count) 1)(slot-value form 'texts))))
+                                         :value  (nth (- (slot-value form 'text-count) 1)(slot-value form 'texts))))
                 )
               (setf (value(find-component :static-text-4 form)) "ready..")
           )
@@ -118,15 +136,16 @@
   )
     )
   )
+)
 
-
+;;;removes a Tab (unless its "Graph" or "Start") from Tab-view
+;;;Deletes any traces (list-view, count, content...)
 
 (defun main-tab-control-on-double-click (dialog widget)
   (declare (ignorable dialog widget)) 
   (unless
       (or (eq (value (find-sibling :tab-control widget)) :start) (eq (value (find-sibling :tab-control widget)) :graph))
     (progn
-      (print (value (find-sibling :tab-control widget)))
       (setf (slot-value dialog 'texts) (delete (nth ( - (read-from-string(symbol-name (value (find-sibling :tab-control widget)))) 1) (slot-value dialog 'texts)) (slot-value dialog 'texts)))
       (setf (slot-value dialog 'struct) (delete (nth ( - (read-from-string(symbol-name (value (find-sibling :tab-control widget)))) 1) (slot-value dialog 'struct)) (slot-value dialog 'struct)))
       (remove-item (find-named-object :text-view dialog) (value (find-sibling :tab-control widget))) 
@@ -134,11 +153,14 @@
       (decf (slot-value dialog 'text-count))))
   t)
 
+;;;Plotts the Graph
+;;;throws an error if no Text are uploaded
+
 (defun main-draw-on-click (dialog widget)
   (declare (ignorable dialog widget))
-  ;; NOTE:  Usually it is better to use an on-change function rather
-  ;; than an on-click function.  See the doc pages for those properties.
-  (let ((l ()) (chart (find-sibling :chart-widget-1 widget)))
+  (if (range (find-sibling :text-view widget))
+   (let ((l ()) (chart (find-sibling :chart-widget-1 widget)))
+    (setf (value(find-sibling :warning widget)) "")
     (if (string= (ask-user-for-choice-from-list "Choose Type of Graph. What measure should be used?" (list "ttr" "kgm")) "ttr")
         
        ;;;if measure is ttr 
@@ -166,16 +188,21 @@
         ))
       ) 
     (setf (chart-objects chart) (apply #'vector  l))
+    (setf (value (find-sibling :tab-control widget)) :graph)
     )
-  (setf (value (find-sibling :tab-control widget)) :graph)
+    (setf (value(find-sibling :warning widget)) "You didn't upload any files to analyze"))
   t)
+
+;;;as long as exactly two Texts from list-view are selected, it displays the Spearmanns roh
+;;;If none, or more than two are selected, it throws an error
 
 (defun main-compare-on-click (dialog widget)
   (declare (ignorable dialog widget))
   ;; NOTE:  Usually it is better to use an on-change function rather
   ;; than an on-click function.  See the doc pages for those properties.
   (if (= 2 (length (value(find-sibling :text-view widget))))
-    (progn
+      (progn
+        (setf (value(find-sibling :warning widget)) "")
       (let* 
           ((x (read-from-string(symbol-name (first (value(find-sibling :text-view widget))))))
            (y (read-from-string(symbol-name (second (value(find-sibling :text-view widget))))))
@@ -186,22 +213,11 @@
      (value(find-sibling :static-text-2 widget)) 
      (concatenate 'string "Spearman's Roh for Text " (write-to-string x) " and Text " (write-to-string y) " is: " (write-to-string(compute_roh textx texty)))
      )))
-    (let ((warning (make-window :modal-dialog-test
-                        :owner dialog
-                        :title "Warning"
-                        :pop-up t
-                        :height 200
-                        :width 340
-                        :dialog-items 
-                        (list (make-instance 'static-text
-                                :height 300
-                                :width 200
-                                :value "You have to select exactly 2 Texts from the list-view"))
-                 )))
-     (pop-up-modal-dialog warning))
+    (setf (value(find-sibling :warning widget)) "You have to select exactly 2 Texts from the list-view")
     )
   t)
 
+;;;another way to load a Text
 
 (defun main-add_Text-on-click (dialog widget)
   (declare (ignorable dialog widget))
@@ -210,21 +226,11 @@
   (text_laden dialog)
   t)
 
-;;;;;;;;;;;;;;;;;;
-;;;;Menu-Items;;;;
-;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;Help-Items;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;Creates Contact and Guide Windows;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun set_ttr(dialog)
-  (setf (slot-value dialog 'measure) "ttr"
-    (selected(find-named-object 'simple_ttr (menu dialog))) t
-    (selected(find-named-object 'kgm (menu dialog))) nil)
-  )
-
-(defun set_kgm(dialog)
-  (setf (slot-value dialog 'measure) "kgm"
-    (selected(find-named-object 'kgm (menu dialog))) t
-    (selected(find-named-object 'simple_ttr (menu dialog))) nil)
-  )
 
 (defun contact(dialog)
   (let ((contact_info (make-window :modal-dialog-test

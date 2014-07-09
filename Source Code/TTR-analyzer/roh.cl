@@ -62,6 +62,7 @@
   (- 1 (/ (* 6 (set_ds x y)) (* (length x) (- (expt (length x) 2) 1))))
   )
 
+;;;Function, thats called from main
 (defun compute_roh(textx texty)
   (let ((p 0)
         (lx textx)
