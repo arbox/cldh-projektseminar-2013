@@ -1,4 +1,3 @@
-
 (in-package :common-graphics-user)
 
 (defclass TTR_tool (dialog) 
@@ -32,8 +31,7 @@
       (progn
         
         ;;;set name of text for tab, increments text-count
-        (let ((name (write-to-string datei)))
-          (setf name (subseq name (+ 1 (search "\\" name :from-end t)) (position #\. name)))  
+        (let ((name (string-downcase (pathname-name datei))))  
         (incf (slot-value form 'text-count))
           
           ;;;creates x = Text-structure
@@ -44,7 +42,7 @@
                  (Text-stemmer x) (ask-user-for-choice-from-list "Choose Stemmer" (list "none" "english" "german" "russian")))
           
           ;;;Loads text into tab
-          ;;;if the text is cyrillic, chaneg to utf-8
+          ;;;if the text is cyrillic, change to utf-8
           (if (equal "russian" (Text-stemmer x))
               (setf (slot-value form 'texts) (append (slot-value form 'texts) (list (file-contents datei :external-format :utf-8))))
               (setf (slot-value form 'texts) (append (slot-value form 'texts) (list (file-contents datei))))
@@ -112,7 +110,7 @@
                  )
                 
                 ;;;Add Text to Tab-control
-                
+
                (add-tab (find-named-object :tab-control form) (intern entry) name)
                (add-component-to-tab (find-named-object :tab-control form)
                                      (intern entry)
@@ -298,4 +296,4 @@ Compare: Only usable, when exactly two texts are selected from the list-view. Co
   (let ((path (ask-user-for-new-pathname "Speichern" :allowed-types (list(cons "Pixmap Files" "*.bmp")))))
     (when path
       (save-pixmap (get-pixmap (window(find-named-object :chart-widget-1 form))) path)))
-  )
+  )  

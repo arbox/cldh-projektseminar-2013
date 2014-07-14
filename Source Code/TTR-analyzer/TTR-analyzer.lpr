@@ -1,4 +1,4 @@
-;; -*- lisp-version: "9.0 [Windows *SMP*] (Jul 4, 2014 9:49)"; cg: "9.0"; -*-
+;; -*- lisp-version: "9.0 [Windows *SMP*] (Jul 14, 2014 19:30)"; cg: "9.0"; -*-
 
 (in-package :cg-user)
 
@@ -75,7 +75,7 @@
   :old-space-size 256000
   :new-space-size 6144
   :runtime-build-option :standard
-  :build-number 13
+  :build-number 27
   :run-with-console nil
   :project-file-version-info nil
   :on-initialization 'default-init-function

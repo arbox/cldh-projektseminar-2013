@@ -53,10 +53,15 @@
     l)
   )
 
+
 ;;;Erhält eine Liste x mit Tokens und errechent den Measure of Textual Diversity von McCarthy
 ;;;
 (defun mtld (x)
-  (/ (+ (oneway_mtld x) (oneway_mtld (reverse x))) 2))
+  (let ((forward_mtld (oneway_mtld x)))
+        (if forward_mtld
+            (/ (+ forward_mtld (oneway_mtld (reverse x))) 2)
+          "Text to short"))
+  )
 
 
 (defun oneway_mtld(x)
@@ -80,7 +85,9 @@
       (incf l)
       )
        (when (> c_ttr u) (setf f (+ f (/ (- 1 c_ttr) (- 1 u)))))
-      (/ (list-length x) f)
+    (if (< 0 f)
+        (/ (list-length x) f)
+        )
     )
   )
       

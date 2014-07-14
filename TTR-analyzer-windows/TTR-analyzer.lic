@@ -17,6 +17,6 @@
 ;; the Allegro CL License Agreement.
 
 
-(:standard 15596370392995398677570929339840182714
+(:standard 308601833400315373153389784881979346154
  (:standard (9 0 :final) :msx86 "[pc0593] University of Trier" nil nil
-  "f7cd969a0c7e8a5184c52ca94873d272"))
+  "55a35061e8cb649322d5e4f19c2fd07d"))

@@ -14,7 +14,7 @@
 ;; (Pass :owner to this function; :parent is for compatibility.)
 (defun make-main
     (&key parent (owner (or parent (screen *system*))) exterior
-     (interior (make-box 908 131 1383 678)) (name :main) (title "TTR-Analyzer")
+     (interior (make-box 760 128 1235 677)) (name :main) (title "TTR-Analyzer")
      (border :frame) (child-p t) form-p)
   (let ((owner
          (make-window name :owner owner
@@ -178,7 +178,7 @@
                        :height 150 :left 11 :name :static-text-1 :tab-control
                        (list :tab-control :start) :top 37 :value "
 1. Use \"File -> Add Text\" to load new Txt-File
-   1a. Choose your preferred Stemmer (use russian only for kyrillic Texts!)
+   1a. Choose your preferred Stemmer (use russian only for cyrillic Texts!)
    1b. The calculation of all three values may take some while...
 2. After selecting two texts from the list-view, use \"Compare\" to measure their similarity
 3. To draw a graph of the TTR-Development, choose \"Draw Graph\"" :width 450)
@@ -227,9 +227,9 @@
                        (list :tab-control :start) :title "Add new Text" :top 484 :width
                        101)
         (make-instance 'static-text :font (make-font-ex nil "Segoe UI / Default" 12)
-                       :foreground-color red :height 36 :left 132 :name :warning
-                       :tab-control (list :tab-control :start) :top 491 :value "" :width
-                       287)
+                       :foreground-color red :height 34 :left 158 :name :warning
+                       :tab-control (list :tab-control :start) :top 494 :value "" :width
+                       240)
         (make-instance 'tab-control :font (make-font-ex nil "Segoe UI / Default" 15)
                        :height 864 :name :tab-control :on-double-click
                        'main-tab-control-on-double-click :range
