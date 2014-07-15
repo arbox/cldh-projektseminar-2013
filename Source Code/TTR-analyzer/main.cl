@@ -192,7 +192,7 @@
   t)
 
 ;;;as long as exactly two Texts from list-view are selected, it displays the Spearmanns roh
-;;;If none, or more than two are selected, it throws an error
+;;;If none or more than two are selected, it throws an error
 
 (defun main-compare-on-click (dialog widget)
   (declare (ignorable dialog widget))
@@ -207,10 +207,17 @@
            (textx (nth (- x 1) (slot-value dialog 'struct)))
            (texty (nth (- y 1) (slot-value dialog 'struct)))
            )
-    (setf 
-     (value(find-sibling :static-text-2 widget)) 
-     (concatenate 'string "Spearman's Roh for Text " (write-to-string x) " and Text " (write-to-string y) " is: " (write-to-string(compute_roh textx texty)))
-     )))
+        (if (string= (ask-user-for-choice-from-list "What measure should be compared?" (list "ttr" "kgm")) "ttr")
+            (setf 
+              (value(find-sibling :static-text-2 widget)) 
+              (concatenate 'string "Spearman's Roh (TTR) for Text " (write-to-string x) " and Text " (write-to-string y) " is: " (write-to-string(compute_roh_ttr textx texty)))
+             )
+            (setf 
+              (value(find-sibling :static-text-2 widget)) 
+              (concatenate 'string "Spearman's Roh (KGM) for Text " (write-to-string x) " and Text " (write-to-string y) " is: " (write-to-string(compute_roh_kgm textx texty)))
+             )
+          )))
+        
     (setf (value(find-sibling :warning widget)) "You have to select exactly 2 Texts from the list-view")
     )
   t)

@@ -4,7 +4,7 @@
 
 (define-project :name :TTR-analyzer
   :modules (list (make-instance 'form-module :name "main" :finder-function 'main
-                                :has-pixmap-file t)
+                                :has-pixmap-file nil)
                  (make-instance 'module :name "ttr")
                  (make-instance 'module :name "german porter")
                  (make-instance 'module :name "english porter")
@@ -75,7 +75,7 @@
   :old-space-size 256000
   :new-space-size 6144
   :runtime-build-option :standard
-  :build-number 27
+  :build-number 30
   :run-with-console nil
   :project-file-version-info nil
   :on-initialization 'default-init-function

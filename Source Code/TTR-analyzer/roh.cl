@@ -63,7 +63,7 @@
   )
 
 ;;;Function, that's called from main
-(defun compute_roh(textx texty)
+(defun compute_roh_ttr(textx texty)
   (let ((p 0)
         (lx textx)
         (ly texty))
@@ -71,5 +71,17 @@
        (setf 
         lx (rank (sort (mapcar #'(lambda (x) (incf p) (list x p)) (Text-ttr_list lx)) #'> :key #'car))
         ly (rank (sort (mapcar #'(lambda (x) (incf p) (list x p)) (Text-ttr_list ly)) #'> :key #'car)))
+
+    (float(roh_formula lx ly))))
+
+;;;Function, that's called from main
+(defun compute_roh_kgm(textx texty)
+  (let ((p 0)
+        (lx textx)
+        (ly texty))
+ 
+       (setf 
+        lx (rank (sort (mapcar #'(lambda (x) (incf p) (list x p)) (Text-kgm lx)) #'> :key #'car))
+        ly (rank (sort (mapcar #'(lambda (x) (incf p) (list x p)) (Text-kgm ly)) #'> :key #'car)))
 
     (float(roh_formula lx ly))))
